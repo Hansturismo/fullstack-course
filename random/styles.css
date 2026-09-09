@@ -1,0 +1,24 @@
+:root {
+  --primary-color: lightblue;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  background-color: var(--primary-color);
+  padding: var(--spacing-lg) 0;
+}
+.section-1 {
+  background-color: var(--primary-color);
+}
+footer {
+  background-color: var(--primary-color);
+  padding: var(--spacing-md) 0;
+}

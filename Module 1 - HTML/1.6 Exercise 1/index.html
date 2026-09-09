@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Eataly Reservations</h1>
+    <p>
+      Eataly takes reservations online and by phone atleast a week in advance.
+    </p>
+    <p>
+      Reservations can be made between 14:00-22:00 during the whole week.<br />
+      Phone reservations are available every day between 10:00-23:00.<br />
+      Online reservations are available 24/7.
+    </p>
+    <p>
+      Phone Number: +1 858-4655773
+      <button>Call</button>
+    </p>
+
+    <form>
+      <h2>Online Reservation</h2>
+      <fieldset>
+        <legend>Reservation form</legend>
+        <label for="first-name">First name:</label>
+        <input
+          type="text"
+          name="first-name"
+          id="first-name"
+          placeholder="John"
+          required
+        />
+        <label for="last-name">Last name:</label>
+        <input
+          type="text"
+          name="last-name"
+          id="last-name"
+          placeholder="Doe"
+          required
+        />
+        <br />
+        <br />
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="john@doe.com"
+          required
+        />
+        <label for="phone">Phone Number:</label>
+        <input
+          type="tel"
+          name="phone"
+          id="phone"
+          placeholder="+1 123-1234567"
+          required
+        />
+        <br />
+        <br />
+        <label for="reservation-date">Pick your reservation</label>
+        <input
+          type="datetime-local"
+          name="reservation-date"
+          id="reservation-date"
+          required
+        />
+        <br />
+        <br />
+        <label>Message to staff:</label>
+        <br />
+        <textarea name="message" id="message" rows="5" cols="40"></textarea>
+        <br />
+        <button>Submit</button>
+        <button type="reset">Reset</button>
+      </fieldset>
+    </form>
+  </body>
+</html>
