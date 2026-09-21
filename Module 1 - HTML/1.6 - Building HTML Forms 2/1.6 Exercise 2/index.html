@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Job Application Form</h1>
+    <p>Please fill out the form below to apply for a position at our company</p>
+    <form>
+      <fieldset>
+        <legend>Personal information</legend>
+        <label for="firstName">First Name*:</label>
+        <br />
+        <input type="text" name="firstName" id="firstName" required />
+        <br />
+        <label for="lastName">Last Name*:</label>
+        <br />
+        <input type="text" name="lastName" id="lastName" required />
+        <br />
+        <label for="email">Email address*:</label>
+        <br />
+        <input type="email" name="email" id="email" required />
+        <br />
+        <label for="phoneNumber">Phone Number*:</label>
+        <br />
+        <input type="number" name="phoneNumber" id="phoneNumber" required />
+      </fieldset>
+      <fieldset>
+        <legend>Job preferences</legend>
+        <label for="positionList">Position applied for*:</label>
+        <br />
+        <select name="positionList" id="positionList" required>
+          <option value="" selected disabled hidden>Select Position</option>
+          <option value="fieldTechnician">Field Technician</option>
+          <option value="itCoordinator">IT Coordinator</option>
+        </select>
+        <br />
+        <label for="expectedSalary">Expected Salary (per annum)*:</label>
+        <br />
+        <input
+          type="number"
+          name="expectedSalary"
+          id="expectedSalary"
+          required
+        />
+        kr
+        <br />
+        <label>Preferred work location*:</label>
+        <br />
+        <input
+          type="radio"
+          name="preferredWorkLocation"
+          id="office"
+          value="office"
+          required
+        />
+        <label for="preferredWorkLocation">Office</label>
+        <br />
+        <input
+          type="radio"
+          name="preferredWorkLocation"
+          id="remote"
+          value="remote"
+          required
+        />
+        <label for="preferredWorkLocation">Remote</label>
+        <br />
+        <input
+          type="radio"
+          name="preferredWorkLocation"
+          id="hybrid"
+          value="hybrid"
+          required
+        />
+        <label for="preferredWorkLocation">Hybrid</label>
+      </fieldset>
+      <fieldset>
+        <legend>Experience and documents</legend>
+        <label for="experienceInput">Years of experience*:</label>
+        <br />
+        <input
+          type="number"
+          nane="experienceInput"
+          id="experienceInput"
+          required
+        />
+        <br />
+        <label for="cvUpload">Upload your CV*:</label>
+        <br />
+        <input
+          type="file"
+          name="cvUpload"
+          id="cvUpload"
+          accept=".pdf, .docx"
+          required
+        />
+        <br />
+        <label for="coverLetter">Cover Letter*:</label>
+        <br />
+        <textarea
+          name="coverLetter"
+          id="coverLetter"
+          rows="5"
+          cols="50"
+          placeholder="Briefly describe why you're a god fit for this role."
+          required
+        ></textarea>
+      </fieldset>
+      <fieldset>
+        <legend>Agreement</legend>
+        <input
+          type="checkbox"
+          name="agreementCheck"
+          id="agreementCheck"
+          value="agreementAgreed"
+        />
+        <label for="agreementCheck"
+          >I confirm that the information provided is accurate</label
+        >
+        <br />
+        <input
+          type="checkbox"
+          name="tosCheck"
+          id="tosCheck"
+          value="tosAgreed"
+        />
+        <label for="tosCheck"
+          >I agree with the terms of service and agree to let CompanyAS keep
+          your application for 12 months</label
+        >
+      </fieldset>
+    </form>
+  </body>
+</html>

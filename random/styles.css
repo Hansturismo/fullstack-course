@@ -22,3 +22,15 @@ footer {
   background-color: var(--primary-color);
   padding: var(--spacing-md) 0;
 }
+img {
+  width: 100px;
+}
+
+.flex-container {
+display: flex;
+}
+.flex-item {
+  width: 100px;
+  background-color: lightblue;
+  border: 2px solid black;
+}

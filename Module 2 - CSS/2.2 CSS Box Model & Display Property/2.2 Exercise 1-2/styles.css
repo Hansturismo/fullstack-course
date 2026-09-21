@@ -1,0 +1,39 @@
+* {
+  background-color: aliceblue;
+  padding: 0px;
+  margin: 0px;
+}
+
+.navbar {
+  margin: 8px;
+  padding: 4px;
+  border: 2px solid black;
+}
+
+.containerbox1 {
+  border: 2px solid gray;
+  margin: 8px;
+  padding: 4px;
+}
+
+.containerbox2 {
+  border: 2px solid darkblue;
+  padding: 4px;
+  margin: 8px;
+}
+
+.containerbox3 {
+  padding: 2px;
+  margin: 2px;
+}
+
+input {
+  display: block;
+  width: 300px;
+}
+
+textarea {
+  display: block;
+  width: 300px;
+  height: 120px;
+}
