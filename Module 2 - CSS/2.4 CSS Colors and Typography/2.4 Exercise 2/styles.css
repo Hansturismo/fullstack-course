@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.902);
+}
+
+header {
+  background-color: rgb(47, 75, 62);
+  border: 1px solid black;
+  margin: 20px 10px;
+  border-radius: 10px;
+}
+
+.main-title {
+  font-style: italic;
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+
+  font-size: xx-large;
+  padding: 20px 0 10px 20px;
+}
+
+.header-intro {
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+
+  padding: 5px 0 5px 20px;
+}
+
+a:link {
+  color: white;
+}
+
+li {
+  display: inline;
+  padding: 0 5px 0 5px;
+}
+
+.navigation-list {
+  padding: 5px 0 20px 20px;
+}
+
+.link {
+}
+
+main {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 10px;
+}
+
+.article,
+.article-title,
+.article-author {
+  font-weight: normal;
+  margin: 10px 0;
+}
+
+hr {
+  height: 3px;
+  background-color: black;
+  margin: 5px 0;
+}
+
+.article {
+  border: 1.5px solid black;
+  border-radius: 10px;
+  margin: 0 0 10px 0px;
+  padding: 10px;
+}
+
+footer {
+  background-color: rgb(47, 75, 62);
+  border: 1px solid black;
+  margin: 20px 10px;
+  border-radius: 10px;
+  text-align: center;
+  padding: 30px;
+}
+
+footer,
+.header-intro,
+.main-title {
+  color: rgb(226, 186, 151);
+}
