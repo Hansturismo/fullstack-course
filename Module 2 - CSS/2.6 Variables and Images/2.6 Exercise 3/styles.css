@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  background-color: aliceblue;
+  font-size: large;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  position: fixed;
+  border-radius: 0 0 10px 10px;
+  opacity: 80%;
+  width: 100%;
+  text-align: center;
+  top: 0;
+  z-index: 1000;
+}
+
+hr {
+  background-color: black;
+  margin: 10px;
+  border: 1px solid black;
+}
+
+li {
+  display: inline;
+  padding: 10px 10px;
+  margin: 10px 0;
+}
+
+.background {
+  background-image: url(galaxy.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat;
+}
+
+.hero {
+  width: 100vw;
+  height: 100vh;
+}
+
+.hero-h1 {
+  background-color: rgb(77 11 191 / 80%);
+  border-radius: 20px 20px 0 0;
+  padding: 20px;
+  position: absolute;
+  top: 525px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: whitesmoke;
+}
+
+.hero-p {
+  background-color: rgb(77 11 191 / 80%);
+  border-radius: 20px;
+  padding: 20px;
+  position: absolute;
+  top: 600px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: whitesmoke;
+  font-size: 1.5rem;
+}
+
+.pfp {
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 40px;
+  height: 350px;
+  width: auto;
+}
+
+.button {
+  position: absolute;
+  top: 800px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: blueviolet;
+  color: white;
+}
+
+.content {
+  max-width: 60%;
+  background-color: rgb(77 11 191 / 80%);
+  border-radius: 20px 20px 0 0;
+  padding: 20px;
+  font-size: larger;
+  position: absolute;
+  top: 1200px;
+  left: 50%;
+  transform: translateX(-50%);
+}

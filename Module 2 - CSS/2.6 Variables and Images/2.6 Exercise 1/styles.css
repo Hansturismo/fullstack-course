@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-bg-color: blue;
+  --seconday-bg-color: green;
+  --text-color-dark: rgb(45, 40, 40);
+  --text-color-light: lightgray;
+  --large-text: 2rem;
+  --medium-text: 1.5rem;
+  --normal-text: 1rem;
+  --small-spacing: 4px;
+  --medium-spacing: 8px;
+  --large-spacing: 12px;
+}
+
+header {
+  background-color: var(--primary-bg-color);
+  padding: var(--large-spacing);
+  color: var(--text-color-light);
+  font-size: var(--large-text);
+}
+
+main {
+  background-color: var(--seconday-bg-color);
+  font-size: var(--medium-text);
+}
+
+.footer {
+  color: var(--text-color-light);
+  font-size: var(--normal-text);
+  background-color: var(--primary-bg-color);
+}
