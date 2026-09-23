@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  background-color: aliceblue;
+  text-align: center;
+}
+
+.navbar_link--home:hover {
+  color: rgb(42, 165, 93);
+  text-decoration: underline;
+  box-shadow: 0 0 8px 4px blue;
+}
+
+.navbar_link--home:current {
+  font-weight: bold;
+  color: pink;
+}
+
+.navbar_link--home:active {
+  background-color: blue;
+}
+
+.navbar_link--home:focus {
+  outline-color: red;
+}
+
+.navbar_link--about:hover {
+  color: brown;
+  text-decoration: underline;
+}
+
+.navbar_link--services:hover {
+  color: brown;
+  text-decoration: line-through;
+  cursor: not-allowed;
+}
+
+.navbar_link--contact:hover {
+  color: brown;
+  text-decoration: underline;
+}

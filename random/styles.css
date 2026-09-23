@@ -1,36 +1,21 @@
-:root {
-  --primary-color: lightblue;
-  --spacing-sm: 0.5rem;
-  --spacing-md: 1rem;
-  --spacing-lg: 2rem;
-}
-
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
-nav {
-  background-color: var(--primary-color);
-  padding: var(--spacing-lg) 0;
-}
-.section-1 {
-  background-color: var(--primary-color);
-}
-footer {
-  background-color: var(--primary-color);
-  padding: var(--spacing-md) 0;
-}
-img {
-  width: 100px;
+body {
+  padding: 2rem;
 }
 
 .flex-container {
-display: flex;
+  display: flex;
+  flex-direction: column;
 }
+
 .flex-item {
-  width: 100px;
-  background-color: lightblue;
-  border: 2px solid black;
+  background-color: green;
+  padding: 10px 10px 10px 10px;
+
+  border: 1px solid black;
 }
