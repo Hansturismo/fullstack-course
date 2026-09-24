@@ -1,0 +1,160 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("../assets/fonts/Montserrat.ttf");
+}
+
+/* Variables */
+:root {
+  /* Colors */
+  --bg-color: #d6e6f2;
+  --form-bg: #fefefe;
+  --button-color: #3498db;
+
+  /* Border */
+  --border-color: #3498db;
+
+  /* Text */
+  --text-color-light: #fefefe;
+  --text-color-dark: #000;
+
+  /* Hover */
+  --hover-color: #245bb5;
+
+  /* Font sizes */
+  --font-size-base: 1rem;
+  --font-size-md: 1.5rem;
+  --font-size-lg: 2rem;
+
+  /* Spacing */
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  border-radius: 8px;
+  font-family: "Montserrat";
+}
+
+/* Header */
+.header {
+  padding: var(--spacing-md);
+  text-align: center;
+}
+
+.header__title {
+  padding: var(--spacing-sm) 0;
+}
+
+/* Main */
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: var(--spacing-lg);
+  align-items: flex-start;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--form-bg);
+  border: 1px solid var(--bg-color);
+  border-radius: 8px;
+  padding: var(--spacing-md);
+  gap: var(--spacing-lg);
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-md);
+  border: 1.5px solid lightgray;
+  border-radius: 8px;
+}
+
+.form__legend {
+  font-weight: bold;
+}
+
+.form__label {
+  display: flex;
+  flex-direction: row;
+}
+
+.form__input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__input {
+  display: flex;
+  flex-direction: column;
+  height: 30px;
+  justify-content: center;
+}
+
+.form__select {
+  height: 30px;
+}
+
+.form__contact-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form__reservation-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form__preferred-seating {
+  display: flex;
+  flex-direction: column;
+  border-width: 0;
+  gap: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.form__textarea {
+  height: 80px;
+}
+
+.form__terms {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-sm);
+}
+
+.form__link {
+  display: flex;
+  padding: 0 0 0 0.25rem;
+}
+
+.form__submit {
+  height: 30px;
+  border-radius: 4px;
+  border: 1px solid lightgray;
+}
+
+.form__submit:hover {
+  height: 30px;
+  background-color: var(--button-color);
+  color: var(--text-color-light);
+  border-radius: 4px;
+  font-weight: bold;
+  border: none;
+}
