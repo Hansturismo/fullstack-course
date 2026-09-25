@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <!-- Module 2 / lecture 4 / CSS Flexbox / exercise 5 -->
+
+    <title>Product Card (Flexbox Exercise)</title>
+  </head>
+
+  <body>
+    <main>
+      <!-- Card image -->
+      <div class="card">
+        <div class="card__image-container">
+          <img
+            class="card__image"
+            src="./assets/images/card-image.jpg"
+            alt="CSS Course"
+          />
+        </div>
+        <!-- Card body -->
+        <div class="card__body">
+          <h2 class="card__title">CSS Fundamentals</h2>
+
+          <p class="card__description">
+            Learn the core concepts of CSS including selectors, typography,
+            colors, and layout techniques used in modern web design.
+          </p>
+
+          <ul class="card__details">
+            <li class="card__detail">
+              <span class="card__detail-label">Difficulty:</span>
+              <span class="card__detail-value">Beginner</span>
+            </li>
+
+            <li class="card__detail">
+              <span class="card__detail-label">Duration:</span>
+              <span class="card__detail-value">10 hours</span>
+            </li>
+
+            <li class="card__detail">
+              <span class="card__detail-label">Format:</span>
+              <span class="card__detail-value">Interactive + practice</span>
+            </li>
+          </ul>
+          <p class="card__price">€19.99</p>
+          <button class="card__button">Enroll now</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
