@@ -1,0 +1,71 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flexbox;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: thistle;
+  justify-content: center;
+  align-content: center;
+  margin: 20px;
+}
+
+.grid {
+  display: grid;
+  background-color: aliceblue;
+  grid-template-columns: repeat(8, 100px);
+  grid-template-rows: repeat(6, 100px);
+  border: 4px solid black;
+  padding: 10px;
+  gap: 10px 10px;
+}
+
+.img1 {
+  grid-column: 1 / span 3;
+  grid-row: 1 / span 4;
+  background-image: url("./assets/images/tree.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.img2 {
+  grid-column: 4 / span 2;
+  grid-row: 1 / span 2;
+  background-image: url("./assets/images/landscape-1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.img3 {
+  grid-column: 6 / span 4;
+  grid-row: 1 / span 3;
+  background-image: url("./assets/images/autumn.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.img4 {
+  grid-column: 4 / span 2;
+  grid-row: 3 / span 2;
+  background-image: url("./assets/images/bird.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.img5 {
+  grid-column: 1 / span 5;
+  grid-row: 5 / span 2;
+  background-image: url("./assets/images/sea.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.img6 {
+  grid-column: 6 / span 4;
+  grid-row: 4 / span 3;
+  background-image: url("./assets/images/cloudy-sky.jpg");
+  background-size: cover;
+  background-position: center;
+}
