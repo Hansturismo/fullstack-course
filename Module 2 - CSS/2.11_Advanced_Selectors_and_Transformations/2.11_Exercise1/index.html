@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <!-- Module 2 / lecture 6 / CSS Advanced Selectors and Transformations / exercise 1 -->
+    <title>Restaurant Booking Form (CSS Advanced Selectors)</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Restaurant Booking Form</h1>
+      <p class="header__description">
+        Fill out the form below to book a table at our restaurant.
+      </p>
+    </header>
+
+    <form>
+      <!-- Contact Information -->
+      <fieldset>
+        <legend>Contact details</legend>
+
+        <label for="fullname">Full Name:</label>
+        <input
+          type="text"
+          id="fullname"
+          name="fullname"
+          required
+          maxlength="50"
+          placeholder="e.g. John Smith"
+        />
+
+        <label for="email">Email Address:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="e.g. john@smith.com"
+          required
+        />
+
+        <label for="phone">Phone Number:</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="e.g. 12345678"
+          pattern="[0-9]{8}"
+          required
+        />
+      </fieldset>
+
+      <!-- Booking Details -->
+      <fieldset>
+        <legend>Reservation details</legend>
+
+        <label for="date">Booking Date:</label>
+        <input type="date" id="date" name="date" min="2024-09-01" required />
+
+        <label for="time">Booking Time:</label>
+        <input
+          type="time"
+          id="time"
+          name="time"
+          min="10:00"
+          max="23:00"
+          required
+        />
+
+        <label for="guests">Number of Guests:</label>
+        <input
+          type="number"
+          id="guests"
+          name="guests"
+          min="1"
+          max="50"
+          required
+        />
+
+        <fieldset>
+          <legend>Preferred Seating Arrangement:</legend>
+
+          <input
+            type="radio"
+            id="indoor"
+            name="seating"
+            value="indoor"
+            required
+          />
+          <label for="indoor">Indoor</label>
+
+          <input type="radio" id="outdoor" name="seating" value="outdoor" />
+          <label for="outdoor">Outdoor</label>
+
+          <input
+            type="radio"
+            id="private-room"
+            name="seating"
+            value="private-room"
+          />
+          <label for="private-room">Private Room</label>
+        </fieldset>
+
+        <label for="special-requests">Special Requests:</label>
+        <textarea
+          id="special-requests"
+          name="special-requests"
+          rows="4"
+          cols="40"
+        ></textarea>
+      </fieldset>
+
+      <!-- Payment Information -->
+      <fieldset>
+        <legend>Payment details</legend>
+
+        <label for="payment">Payment Method:</label>
+        <select id="payment" name="payment" required>
+          <option value="credit-card">Credit Card</option>
+          <option value="paypal">PayPal</option>
+          <option value="vipps">Vipps</option>
+        </select>
+      </fieldset>
+
+      <!-- Terms -->
+      <section>
+        <input type="checkbox" id="terms" name="terms" required />
+        <label for="terms">
+          I agree to the <a href="#">terms and conditions</a>
+        </label>
+      </section>
+
+      <input type="submit" value="Book Now" />
+    </form>
+  </body>
+</html>

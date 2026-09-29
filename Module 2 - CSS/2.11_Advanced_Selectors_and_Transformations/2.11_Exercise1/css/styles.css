@@ -1,0 +1,79 @@
+:root {
+  /* Colors */
+  --background-color-dark: #4b0082;
+  --background-color-light: lightblue;
+  --text-color-dark: #333;
+  --text-color-light: #fff;
+  /* Font sizes */
+  --font-base: 1rem;
+  --font-md: 1.25rem;
+  --font-lg: 2rem;
+  /* Spacing */
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--background-color-dark);
+  color: var(--text-color-dark);
+  font-family: Arial, sans-serif;
+}
+
+header {
+  color: var(--text-color-light);
+}
+
+.header__description {
+  padding: var(--spacing-md) 0;
+}
+
+/* Form container */
+form {
+  width: 100%;
+  max-width: 600px;
+  padding: var(--spacing-lg);
+  border-radius: 12px;
+  background: var(--background-color-light);
+}
+form > fieldset {
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+fieldset label {
+  display: block;
+}
+
+/* fieldset:first-child > input {
+  display: block;
+  width: 100%;
+  padding: var(--spacing-sm);
+} */
+
+/* Inputs in Contact Details */
+fieldset :is([type="text"], [type="email"], [type="tel"]) {
+  display: block;
+  width: 100%;
+  padding: var(--spacing-sm);
+}
+/* Spacing over label in contact details */
+fieldset :is(label[for="email"]) {
+  margin-top: var(--spacing-md);
+}
+/* Spacing under email field in contact details */
+fieldset :is(input[type="email"]) {
+  margin-bottom: var(--spacing-md);
+}
