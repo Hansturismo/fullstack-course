@@ -53,22 +53,24 @@ form > fieldset {
   margin-bottom: var(--spacing-md);
 }
 
-fieldset label {
-  display: block;
-}
-
 /* fieldset:first-child > input {
   display: block;
   width: 100%;
   padding: var(--spacing-sm);
 } */
 
+/* Targets ONLY labels with specified attribute selector? */
+fieldset label:is([for="text"], [for="email"], [for="tel"]) {
+  display: block;
+}
+
 /* Inputs in Contact Details */
-fieldset :is([type="text"], [type="email"], [type="tel"]) {
+fieldset input:is([type="text"], [type="email"], [type="tel"]) {
   display: block;
   width: 100%;
   padding: var(--spacing-sm);
 }
+
 /* Spacing over label in contact details */
 fieldset :is(label[for="email"]) {
   margin-top: var(--spacing-md);
@@ -76,4 +78,42 @@ fieldset :is(label[for="email"]) {
 /* Spacing under email field in contact details */
 fieldset :is(input[type="email"]) {
   margin-bottom: var(--spacing-md);
+}
+
+/* Targets the fieldset that has inputs of type="radio" */
+fieldset:has(> input[type="radio"] + label) {
+  border: none;
+  display: block;
+}
+
+/* To be able to vertically align the paired input & label,
+Copilot suggested this solution as I couldn't find a solution without changing the HTML 
+(by creating a container for each input + label, for example). */
+fieldset input[type="radio"] + label::after {
+  content: "";
+  display: block;
+}
+
+/* In any fieldset, targets the inputs(which are checked) and labels that are directly next to eachother */
+fieldset :is(input[type="radio"]:checked + label) {
+  color: var(--background-color-dark);
+  font-weight: bold;
+}
+
+legend:has(+ input[type="radio"]) {
+  padding-top: 10px;
+}
+
+input[id="private-room"] {
+  margin-bottom: 10px;
+}
+
+textarea[id="special-requests"] {
+  display: block;
+}
+
+section:has(> input[type="checkbox"]) {
+  border: 2px groove rgb(240, 240, 240);
+  padding: 16px;
+  margin-bottom: 20px;
 }
