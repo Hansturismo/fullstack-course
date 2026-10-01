@@ -6,20 +6,58 @@
     <link href="./css/styles.css" rel="stylesheet" />
     <title>Product Page</title>
   </head>
-  <body class="flex_container">
-    <header>
-      <h1>The new & improved MonkeyPhone</h1>
-      <h2>Fully designed by monkeys!</h2>
+  <body>
+    <header class="header">
+      <h1>PriTech</h1>
     </header>
-    <main>
-      <div class="img_container">
-        <img src="./assets/images/monkeyphone.png" alt="">
+    <main class="flex_container">
+      <div class="flex_container product_container">
+        <div class="product_introduction">
+          <p>
+            For too long, have primates gone without their own, stylized mobile
+            phone.
+          </p>
+          <p>
+            That's why we at PriTech, where primates does <b>most</b>, if not
+            all of the design work, decided to launch our very own line of
+            mobile phones directed to the primates of the world.
+          </p>
+        </div>
+        <h2 class="product_title">PriMate Zero</h2>
+        <!-- Picture found online, removed white bg using Copilot -->
+        <img
+          class="product_img"
+          src="./assets/images/monkeyphone_transparent.png"
+          alt=""
+        />
+        <div class="product_details">
+          <ul class="product_details-list__left">
+            <li>Banana scented (duh)</li>
+            <li>Big keys for big thumbs!</li>
+            <li>Anti-stick coating for sticky banana fingers</li>
+            <li>Slide-cover protects keys when phone drops out of trees</li>
+          </ul>
+          <ul class="product_details-list__right">
+            <li class="li_right">Supports 5G</li>
+            <li class="li_right">Metal body incase mistaken for banana</li>
+            <li class="li_right">
+              AI powered translator to finally communicate with primates!
+            </li>
+            <li class="li_right">
+              Black version for primates who are not easily tempted by banana
+              color!
+            </li>
+          </ul>
+        </div>
+        <div class="button_container">
+          <a class="a" href="./order.html">Order now!</a>
+        </div>
       </div>
     </main>
-    <footer class="">
+    <footer class="footer">
       <div>
         <p>
-          DISCLAIMER: This page is a student project and was created for
+          <b>DISCLAIMER:</b> This page is a student project and was created for
           educational purposes, and is not an official or affiliated website.
         </p>
       </div>
