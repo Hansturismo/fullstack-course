@@ -1,0 +1,480 @@
+@font-face {
+  font-family: "Clear Sans";
+  src: url("../assets/fonts/ClearSans-Regular-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Clear Sans";
+  src: url("../assets/fonts/ClearSans-Bold-webfont.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+  font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+:root {
+  /* General colors */
+  --color-white: white;
+  --color-black: black;
+  --color-gray: gray;
+
+  /* 2048-farger */
+  --color-title: #776e65;
+  --color-hover: #c2c2c1;
+  --color-primary: rgb(170, 132, 85);
+  --color-board: #9B8B7C;
+  --color-light: rgb(255, 227, 174);
+  --color-medium: rgb(235, 192, 113);
+  --color-lessthan8: #746452;
+  --color-currentScore: #e9e7d9;
+  --color-bg: #faf8f0;
+
+
+  /* Tile-colors */
+  --color-tile-empty: #bcac97;
+  --color-tile-2: #ede4da;
+  --color-tile-4: #e9d9b7;
+  --color-tile-8: #eeb175;
+  --color-tile-16: #f29562;
+  --color-tile-32: #f38266;
+  --color-tile-128: #eed26b;
+
+  /* Powerup variables */
+  --color-powerup-bg: #e9e7d9;
+  --color-powerup-button: #b9ac9a;
+  --color-powerup-button-inactive: #dbd5c6;
+  --powerUp-margin: 4px 2px 2px 2px;
+
+
+  /* Endre tile-size for å endre størrelse på hele spillebrettet */
+  --tile-size: 110px;
+}
+
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-bg);
+  min-height: 100vh;
+}
+
+.siteContent {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 700px); /* gjør elementet 700px (350px på hver side) smalere enn hele bredden til forelderen. */
+  max-width: 1400px;
+  min-height: 100vh;
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  gap: 20px;
+  height: 80px;
+  padding: 0 10px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.headerLeft,
+.headerActions {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.brandControl,
+.scoresContainer,
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.headerLeft {
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+.brandControl {
+  border: none;
+  border-radius: 8px;
+  height: 56px;
+  padding: 0px 12px;
+  background-color: var(--color-bg);
+  cursor: pointer;
+}
+
+.brandControl img.hamburgerIcon {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.brandControl h1 {
+  margin: 0;
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: var(--color-title);
+}
+
+.brandControl:hover {
+  background-color: var(--color-hover);
+}
+
+.scoresContainer {
+  display: flex;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.currentScore{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--color-currentScore);
+  font-weight: bold;
+  align-items: center;
+  text-align: center;
+  width: 70px;
+  height: 56px;
+  border-radius: 16px;
+}
+
+.bestScore{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid rgb(152, 136, 118);
+  border-color: var(--color-powerup-bg);
+  font-weight: bold;
+  align-items: center;
+  text-align: center;
+  width: 70px;
+  height: 56px;
+  border-radius: 16px;
+}
+
+.score__text {
+  color: var(--color-title);
+  font-size: 14px;
+  transform: translateY(2px);
+}
+.score__number {
+  color: var(--color-title);
+  font-size: 20px;
+  font-weight: 900;
+  transform: translateY(-2px);
+}
+
+.headerActions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.feedbackLink {
+  text-decoration: none;
+  font-size: medium;
+  color: var(--color-primary);
+}
+.feedbackLink:hover{
+  text-decoration: underline;
+}
+
+.newGameButton{
+  background-color: var(--color-title);
+  color: var(--color-white);
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+  border: solid;
+  border-radius: 10px;
+  width: 100px;
+  padding: 8px
+}
+
+/* Game Area */
+
+.gameArea {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.gameBoardArea {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gameBoard {
+  background-color: var(--color-board);
+  padding: 8px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px;
+  width: max-content;
+  margin: 20px auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, var(--tile-size));
+  grid-template-rows: repeat(4, var(--tile-size));
+  gap: 10px;
+}
+
+.tile {
+  width: var(--tile-size);
+  height: var(--tile-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-tile-empty);
+  border-radius: 5px;
+  font-weight: bolder;
+  font-size: xxx-large;
+  /* box-shadow: inset 0 0 5px; */
+}
+
+.tile2 {
+  background-color: var(--color-tile-2);
+  color: var(--color-lessthan8);
+}
+
+.tile4 {
+  background-color: var(--color-tile-4);
+  color: var(--color-lessthan8);
+}
+
+.tile8 {
+  background-color: var(--color-tile-8);
+  color: var(--color-white);
+}
+
+.tile16 {
+ background-color: var(--color-tile-16);
+ color: var(--color-white);
+}
+
+.tile32 {
+  background-color: var(--color-tile-32);
+  color: var(--color-white);
+}
+
+.tile128 {
+  background-color: var(--color-tile-128);
+  color: var(--color-white);
+}
+
+.gameBoard__powerUps {
+  display: flex;
+  flex-direction: row;
+  flex: 0 0 auto;
+  align-self: center;
+  justify-content: space-around;
+  background-color: var(--color-powerup-bg);
+  border-radius: 10px;
+  width: 200px;
+  padding: 8px;
+  /* gap: 20px; */
+}
+
+.powerupItem {
+  position: relative; /* Gjør at tooltipen kan posisjoneres relativt til riktig power-up */
+}
+
+.powerupButton {
+  border-radius: 5px;
+  border: none;
+  width: 45px;
+  height: 45px;
+  background-color: var(--color-powerup-button);
+}
+
+.powerupButton--inactive {
+  border-radius: 5px;
+  border: none;
+  width: 45px;
+  height: 45px;
+  background-color: var(--color-powerup-button-inactive);
+}
+
+.powerupIcon {
+  width: 70%;
+  height: 70%;
+}
+
+.powerupTooltip {
+  background-color: var(--color-gray);
+  color: var(--color-white);
+  position: absolute;
+  bottom: calc(100% + 14px);
+  left: 50%;
+  border-radius: 6px;
+  padding: 4px;
+  visibility: hidden; /* Tooltip is hidden normally */
+  opacity: 0;
+
+  transform: translate(-50%, 4px);
+
+  min-width: 260px;
+}
+
+.charges {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.usedCharge {
+  background-color: var(--color-powerup-button-inactive);
+  border-radius: 10px;
+  width: 16px;
+  height: 4px;
+  margin: var(--powerUp-margin)
+}
+
+.unusedCharge {
+  background-color: var(--color-powerup-button);
+  border-radius: 10px;
+  width: 16px;
+  height: 4px;
+  margin: var(--powerUp-margin)
+}
+
+/* Shows the tooltip on hover */
+.powerupButton:hover ~ .powerupTooltip {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+.powerupButton--inactive:hover ~ .powerupTooltip {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+/* Footer */
+
+footer {
+  flex: 0 0 auto;
+  color: var(--color-board);
+  text-align: center;
+}
+
+footer p {
+  padding: 20px 5px 10px 5px;
+  font-size:x-small;
+}
+
+/* Reduses the empty space on each side when the browser size is less than 1360px */
+@media (max-width: 1360px) {
+  .siteContent {
+    width: calc(100% - 400px);
+  }
+}
+
+/* Hides the "Give Feedback" button on smaller screens */
+@media (max-width: 1060px) {
+  .feedbackLink {
+    display: none;
+  }
+}
+
+/* Removes empty space on each side, and lets main content use up the area*/
+@media (max-width: 1000px) {
+  .siteContent {
+    width: 100%;
+  }
+}
+
+/* Makes the gameboard responsive, and hides the 2048 title on smallers screens */
+@media (max-width: 600px) {
+  :root {
+    --tile-size: clamp(40px, calc((100vw - 120px) / 4), 110px);
+  }
+  .brandControl h1 {
+    display: none;
+  }
+  footer p {
+    padding: 20px 5px 0px 5px;
+  }
+}
+
+/* Makes the header more compact so smaller it fits smaller screens*/
+@media (max-width: 415px) {
+  .header {
+    gap: 8px;
+    padding: 0 6px;
+  }
+
+  .brandControl {
+    padding: 0 4px;
+  }
+
+  .brandControl img.hamburgerIcon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .scoresContainer {
+    gap: 6px;
+  }
+
+  .currentScore,
+  .bestScore {
+    width: 52px;
+    height: 50px;
+    font-size: 16px;
+  }
+
+  .newGameButton {
+    width: auto;
+    padding: 6px 8px;
+    font-size: 14px;
+  }
+}
+
+/* Centeres the power-up tooltips and limits their width on small screens */
+@media (max-width: 381px) {
+  .gameBoard__powerUps {
+    position: relative;
+  }
+
+  .powerupItem {
+    position: static;
+  }
+
+  .powerupTooltip {
+    left: 50%;
+    min-width: 0;
+    width: calc(100vw - 20px);
+    max-width: 249.6px;
+    transform: translate(-50%, 4px);
+  }
+
+  .powerupButton:hover ~ .powerupTooltip {
+    transform: translate(-50%, 0);
+  }
+}
+
+@media (max-height: 650px) {
+  footer {
+    display: none;
+  }
+}

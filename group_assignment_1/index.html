@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <!-- Samler hovedinnholdet og gjør det mulig å sentrere siden med tomrom på sidene. -->
+    <div class="siteContent">
+        <header class="header">
+            <div class="headerLeft">
+                <button class="brandControl" type="button" aria-label="Open menu">
+                    <img class="hamburgerIcon" src="./assets/icons/menuIcon.svg" alt="" aria-hidden="true">
+                    <h1 class="">2048</h1>
+                </button>
+            </div>
+            <div class="scoresContainer">
+                <div class="currentScore">
+                    <span class="score__text">SCORE</span>
+                    <span class="score__number">16</span>
+                </div>
+                <div class="bestScore">
+                    <span class="score__text">BEST</span>
+                    <span class="score__number">128</span>
+                </div>
+            </div>
+            <div class="headerActions">
+                <a class="feedbackLink" target="_blank" rel="noopener noreferrer" href="#">Give Feedback</a>
+                <button class="newGameButton" type="button">New Game</button>
+            </div>
+        </header>
+        <main class="gameArea">
+            <div class="gameBoardArea">
+                <div class="gameBoard" aria-label="2048 game board">
+                    <div class="grid">
+                        <!-- Row 1 -->
+                        <div class="tile tile4">4</div>
+                        <div class="tile tile8">8</div>
+                        <div class="tile"></div>
+                        <div class="tile"></div>
+                        <!-- Row 2 -->
+                        <div class="tile tile4">4</div>
+                        <div class="tile tile16">16</div>
+                        <div class="tile tile2">2</div>
+                        <div class="tile"></div>
+                        <!-- Row 3 -->
+                        <div class="tile tile8">8</div>
+                        <div class="tile tile128">128</div>
+                        <div class="tile tile4">4</div>
+                        <div class="tile"></div>
+                        <!-- Row 4 -->
+                        <div class="tile tile4">4</div>
+                        <div class="tile tile2">2</div>
+                        <div class="tile tile32">32</div>
+                        <div class="tile tile4">4</div>
+                    </div>
+                </div>
+            </div>
+            <section class="gameBoard__powerUps" aria-label="2048 game power-ups">
+                <div class="powerupItem">
+                    <button class="powerupButton--inactive" type="button" aria-label="Undo">
+                        <img class="powerupIcon undoIcon" src="./assets/icons/undoIcon.svg" alt="" aria-hidden="true">
+                    </button>
+                    <div class="charges" aria-hidden="true">
+                        <span class="unusedCharge"></span>
+                        <span class="usedCharge"></span>
+                    </div>
+
+                    <div class="powerupTooltip" role="tooltip">
+                        <div class="tooltipFirstLine">
+                            <span class="tooltipTitle">UNDO</span>
+                            <span class="tooltipUses">0 uses left</span>
+                        </div>
+
+                        <div class="tooltipDescription">
+                            Make a 128 tile to get more uses
+                        </div>
+                    </div>
+                </div>
+                <div class="powerupItem">
+                    <button class="powerupButton" type="button" aria-label="Swap two tiles">
+                        <img class="powerupIcon swapTilesIcon" src="./assets/icons/swapTilesIcon.svg" alt="" aria-hidden="true">
+                    </button>
+                    <div class="charges" aria-hidden="true">
+                        <span class="unusedCharge"></span>
+                        <span class="usedCharge"></span>
+                    </div>
+                    <div class="powerupTooltip" role="tooltip">
+                        <div class="tooltipFirstLine">
+                            <span class="tooltipTitle">SWAP TWO TILES</span>
+                            <span class="tooltipUses">1 use left</span>
+                        </div>
+                        <div class="tooltipDescription">
+                            Make a 256 tile to get more uses
+                        </div>
+                    </div>
+                </div>
+                <div class="powerupItem">
+                    <button class="powerupButton--inactive" type="button" aria-label="Delete tiles by number">
+                        <img class="powerupIcon deleteTilesIcon" src="./assets/icons/deleteTilesIcon.svg" alt="">
+                    </button>
+                    <div class="charges" aria-hidden="true">
+                        <span class="usedCharge"></span>
+                        <span class="usedCharge"></span>
+                    </div>
+                        <div class="powerupTooltip" role="tooltip">
+                            <div class="tooltipFirstLine">
+                                <span class="tooltipTitle">DELETE TILES BY NUMBER</span>
+                                <span class="tooltipUses">0 uses left</span>
+                            </div>
+                            <div class="tooltipDescription">
+                                Make a 512 tile to get more uses
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            
+            <p>play2048.co © 2014—2026 Gabriele Cirulli. All rights reserved.</p>
+        
+        </footer>
+    </div>
+</body>
+</html>
