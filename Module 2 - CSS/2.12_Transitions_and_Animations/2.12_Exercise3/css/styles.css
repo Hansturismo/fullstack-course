@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progressbar_bg {
+  width: 400px;
+  height: 40px;
+  border: 2px solid gray;
+}
+
+.progressbar_bar {
+  height: 100%;
+  animation-name: load;
+  animation-duration: 3.5s;
+  animation-fill-mode: forwards;
+  background-color: blue;
+  width: 0%;
+}
+
+@keyframes load {
+  0% {
+    width: 0%;
+  }
+  25% {
+    width: 25%;
+  }
+  50% {
+    width: 50%;
+  }
+  100% {
+    width: 100%;
+  }
+}
