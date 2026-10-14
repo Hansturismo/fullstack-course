@@ -12,10 +12,31 @@ body {
   min-height: 100vh;
 }
 
-.header {
+.header__product {
+  position: relative;
+  display: flex;
+  flex: 0 0 100px;
+  align-items: center;
   text-align: center;
   font-size: 2rem;
-  padding: 40px;
+  padding: 20px;
+}
+
+.header__form {
+  position: relative;
+  display: flex;
+  flex: 0 0 100px;
+  align-items: center;
+  text-align: center;
+  font-size: 2rem;
+  padding: 20px;
+}
+
+.h1__product,
+.h1__form {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .flex_container {
@@ -23,7 +44,10 @@ body {
   flex-direction: column;
   align-items: center;
   flex-grow: 1;
+  gap: 10px;
 }
+
+/* Front page styling */
 
 .product_title {
   text-align: center;
@@ -41,7 +65,7 @@ body {
   font-size: 1.2rem;
   background-color: blanchedalmond;
   border-radius: 10px;
-  border: 1px solid gray;
+  /* border: 1px solid gray; */
   padding: 10px;
 }
 
@@ -70,6 +94,8 @@ body {
   padding: 20px;
 }
 
+/* List styling, allowing dots on left and right */
+
 .product_details-list__left {
   text-align: left;
   margin-left: 0.5rem;
@@ -94,33 +120,53 @@ body {
   align-items: center;
   align-content: center;
   width: 20%;
+  min-width: 250px;
   height: 60px;
 }
 
-/* Hyperlink that's styled to look like a button! */
-.a {
+/* Hyperlink that's styled to look like a button */
+.button__order {
   display: flex;
   text-decoration: none;
   justify-content: center;
   align-items: center;
-  width: 80%;
-  min-width: 140px;
-  height: 60px;
-  font-size: 1.5rem;
-  background-color: dodgerblue;
+  max-width: auto;
+  min-width: auto;
+  height: auto;
+  min-height: 50px;
+  font-size: 1.3rem;
+  background-color: orange;
   color: whitesmoke;
-  border: 3px solid black;
-  border-radius: 20px;
+  border: 2px solid black;
+  border-radius: 16px;
+  padding: 0 5px 0 5px;
 }
 
-.a:hover {
-  background-color: cornflowerblue;
+.button__back {
+  margin-right: auto;
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  max-width: auto;
+  min-width: auto;
+  height: 50px;
+  font-size: 1.3rem;
+  background-color: orange;
+  color: whitesmoke;
+  border: 2px solid black;
+  border-radius: 16px;
+  padding: 0 5px 0 5px;
 }
 
-.a:active {
-  width: 75%;
-  height: 55px;
-  font-size: 1.4rem;
+.button__order:hover,
+.button__back:hover {
+  background-color: orangered;
+}
+
+.button__order:active,
+.button__back:active {
+  transform: scale(0.95);
 }
 
 .footer {
@@ -129,4 +175,112 @@ body {
   font-size: 1.2rem;
   padding: 10px;
   background-color: blanchedalmond;
+}
+
+/* Form page styling */
+
+.flex_container__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.legend__form {
+  font-weight: bold;
+}
+
+.contact_info {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  gap: 2px;
+  max-width: auto;
+  min-width: 250px;
+  border-radius: 10px;
+  background-color: blanchedalmond;
+}
+
+.product_options {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  gap: 15px;
+  max-width: auto;
+  min-width: 250px;
+  border-radius: 10px;
+  background-color: blanchedalmond;
+}
+
+.product_options__color {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  padding: 12px;
+  gap: 4px;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.product_options__storage {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  padding: 12px;
+  gap: 4px;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.product_options__optionals {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  padding: 12px;
+  gap: 4px;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.h2_form {
+  text-decoration: underline;
+  margin: 20px 0 20px 0;
+}
+
+.order_disclaimer {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  text-align: center;
+  padding: 12px;
+  gap: 4px;
+  max-width: 400px;
+  border-radius: 10px;
+  background-color: blanchedalmond;
+}
+
+.button_form__submit {
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  max-width: auto;
+  min-width: auto;
+  height: auto;
+  min-height: 50px;
+  font-size: 1.3rem;
+  background-color: orange;
+  color: whitesmoke;
+  border: 2px solid black;
+  border-radius: 16px;
+  padding: 0 5px 0 5px;
+  margin-top: auto;
+}
+
+.button_form__submit:hover {
+  background-color: orangered;
+}
+
+.button_form__submit:active {
+  transform: scale(0.95);
 }
