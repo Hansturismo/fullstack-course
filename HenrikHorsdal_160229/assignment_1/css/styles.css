@@ -39,7 +39,7 @@ body {
   transform: translateX(-50%);
 }
 
-.flex_container {
+.flex-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,7 +49,7 @@ body {
 
 /* Front page styling */
 
-.product_title {
+.product-title {
   text-align: center;
   font-size: 2rem;
   text-decoration: underline;
@@ -59,7 +59,7 @@ body {
   padding: 10px;
 }
 
-.product_introduction {
+.product-introduction {
   max-width: 60%;
   text-align: center;
   font-size: 1.2rem;
@@ -69,20 +69,20 @@ body {
   padding: 10px;
 }
 
-.product_container {
+.product-container {
   align-content: center;
   justify-content: center;
   gap: 30px;
 }
 
-.product_img {
+.product__img {
   width: 40%;
   height: auto;
   border-radius: 60px;
   background-color: blanchedalmond;
 }
 
-.product_details {
+.product-details {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -96,25 +96,25 @@ body {
 
 /* List styling, allowing dots on left and right */
 
-.product_details-list__left {
+.product-details-list__left {
   text-align: left;
   margin-left: 0.5rem;
 }
 
-.product_details-list__right {
+.product-details-list__right {
   text-align: right;
 }
 
-.li_right {
+.li__right {
   list-style: none;
 }
 
-.li_right::after {
+.li__right::after {
   content: "•";
   margin-left: 0.5rem;
 }
 
-.button_container {
+.button-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -136,7 +136,7 @@ body {
   min-height: 50px;
   font-size: 1.3rem;
   background-color: orange;
-  color: whitesmoke;
+  color: black;
   border: 2px solid black;
   border-radius: 16px;
   padding: 0 5px 0 5px;
@@ -152,8 +152,8 @@ body {
   min-width: auto;
   height: 50px;
   font-size: 1.3rem;
-  background-color: orange;
-  color: whitesmoke;
+  background-color: #ffa500;
+  color: rgb(0, 0, 0);
   border: 2px solid black;
   border-radius: 16px;
   padding: 0 5px 0 5px;
@@ -179,40 +179,42 @@ body {
 
 /* Form page styling */
 
-.flex_container__form {
+.flex-container__form {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
 }
 
-.legend__form {
+.form__legend {
   font-weight: bold;
 }
 
-.contact_info {
+.contact-info {
   display: flex;
   flex-direction: column;
   padding: 12px;
   gap: 2px;
   max-width: auto;
+  width: 420px;
   min-width: 250px;
   border-radius: 10px;
   background-color: blanchedalmond;
 }
 
-.product_options {
+.product-options {
   display: flex;
   flex-direction: column;
   padding: 12px;
   gap: 15px;
   max-width: auto;
+  width: 420px;
   min-width: 250px;
   border-radius: 10px;
   background-color: blanchedalmond;
 }
 
-.product_options__color {
+.product-options__color {
   display: flex;
   flex-direction: column;
   width: auto;
@@ -222,7 +224,7 @@ body {
   border-radius: 10px;
 }
 
-.product_options__storage {
+.product-options__storage {
   display: flex;
   flex-direction: column;
   width: auto;
@@ -232,7 +234,7 @@ body {
   border-radius: 10px;
 }
 
-.product_options__optionals {
+.product-options__optionals {
   display: flex;
   flex-direction: column;
   width: auto;
@@ -242,24 +244,24 @@ body {
   border-radius: 10px;
 }
 
-.h2_form {
+.h2-form {
   text-decoration: underline;
   margin: 20px 0 20px 0;
 }
 
-.order_disclaimer {
+.order-disclaimer {
   display: flex;
   flex-direction: column;
   width: auto;
-  text-align: center;
   padding: 12px;
   gap: 4px;
-  max-width: 400px;
+  width: 420px;
+  max-width: auto;
   border-radius: 10px;
   background-color: blanchedalmond;
 }
 
-.button_form__submit {
+.button-form__submit {
   display: flex;
   text-decoration: none;
   justify-content: center;
@@ -270,17 +272,17 @@ body {
   min-height: 50px;
   font-size: 1.3rem;
   background-color: orange;
-  color: whitesmoke;
+  color: black;
   border: 2px solid black;
   border-radius: 16px;
   padding: 0 5px 0 5px;
   margin-top: auto;
 }
 
-.button_form__submit:hover {
+.button-form__submit:hover {
   background-color: orangered;
 }
 
-.button_form__submit:active {
+.button-form__submit:active {
   transform: scale(0.95);
 }
