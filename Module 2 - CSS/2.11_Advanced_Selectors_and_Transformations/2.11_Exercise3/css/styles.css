@@ -1,0 +1,113 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page */
+body {
+  background: linear-gradient(135deg, #e9eef5, #d9e2f0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Grid container */
+.pricing {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+
+  width: 90%;
+  max-width: 1100px;
+}
+
+/* Card */
+.pricing__card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  text-align: center;
+  position: relative;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 26px;
+
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+
+  border: 1px solid #eef1f6;
+}
+
+/* Title */
+.pricing__title {
+  color: #111827;
+}
+
+/* Price */
+.pricing__price {
+  font-size: 2rem;
+  color: #0f172a;
+}
+
+/* Features */
+.pricing__features {
+  list-style: none;
+  flex-grow: 1;
+}
+
+.pricing__feature {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #edf0f5;
+  font-size: 0.95rem;
+  color: #4b5563;
+}
+
+/* Button */
+.pricing__button {
+  background: #1434a4;
+  color: white;
+
+  border: none;
+  border-radius: 10px;
+
+  padding: 0.9rem 1.2rem;
+
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Badge */
+.pricing__badge {
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  width: max-content;
+  margin: 0 auto;
+  background: #1f51ff;
+  color: white;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+
+  padding: 8px 12px;
+
+  border-radius: 999px;
+
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+/* Button hover (subtle improvement, not layout change) */
+.pricing__button:hover {
+  background: #1f51ff;
+}
+
+.pricing__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 20px 6px lightgray;
+}

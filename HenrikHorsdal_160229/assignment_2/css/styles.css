@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --card-bg-color: rgb(135, 174, 190);
+  --card-border-color: sienna;
+  --bg-color: rgb(50, 50, 50);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  background-color: var(--bg-color);
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  width: 100vw;
+  height: 4vh;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: auto;
+  background-color: rgb(135, 174, 190);
+}
+
+main {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 100vw;
+}
+
+.flex-content {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+}
+
+.card-container__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: start;
+  width: 100vw;
+}
+
+.team-introduction {
+  background-color: lightblue;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.card-grid-title__active-players,
+.card-grid-title__managers-members {
+  position: absolute;
+  text-align: center;
+  background-color: blanchedalmond;
+  width: clamp(14rem, 50%, 16rem);
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2px solid sienna;
+  border-radius: 20px 20px 4px 4px;
+  margin: 0.5rem 0rem 0rem 0;
+  padding: 0.5rem;
+}
+
+.card-grid__active-players,
+.card-grid__managers-members {
+  display: grid;
+  position: relative;
+  justify-content: center;
+  width: auto;
+  grid-template-columns: repeat(3, minmax(13.5rem, 16rem));
+  grid-template-rows: repeat(auto-fit, minmax(13.5rem, 24rem));
+  column-gap: 1.4rem;
+  row-gap: 1.4rem;
+  padding: 4rem 1rem 1rem 1rem;
+}
+
+/* using selectors and combinators, we select the last child of the parent, 
+but since there's an unrelated child (an <h2> title with position: absolute)in the same grid,
+we filter it to only count .grid_item */
+.card-grid__active-players > :last-child:nth-child(3n + 1 of .grid-item),
+.card-grid__managers-members > :last-child:nth-child(3n + 1 of .grid-item) {
+  grid-column: 2;
+}
+
+.grid-item {
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--card-bg-color);
+  border: 2px solid var(--card-border-color);
+  border-radius: 8px;
+}
+
+.grid-item:hover {
+  transform: scale(1.02);
+}
+
+.member-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  max-height: 8rem;
+  width: 90%;
+}
+
+.member-id {
+  border-bottom: 1px solid sienna;
+  font-size: xx-large;
+}
+
+.member-name,
+.member-role,
+.member-join-date,
+.member-nationality {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  justify-content: space-between;
+}
+
+.member-name h3,
+.member-role h3,
+.member-join-date h3,
+.member-nationality h3 {
+  padding-right: 0.4rem;
+  text-align: left;
+  
+}
+.member-name p,
+.member-role p,
+.member-join-date p,
+.member-nationality p {
+  text-decoration: underline;
+  text-align: right;
+}
+
+.member-image__placeholder {
+  background-image: url(/HenrikHorsdal_160229/assignment_2/assets/icons/user-solid-full.svg);
+  height: 180px;
+  width: 140px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: 2px solid sienna;
+  border-radius: 10px;
+}
+
+.member-image__scyle {
+  height: 200px;
+  width: 160px;
+  background-image: url(/HenrikHorsdal_160229/assignment_2/assets/images/image-8.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: 2px solid sienna;
+  border-radius: 10px;
+}
+
+.member-nationality {
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  height: 4vh;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: auto;
+  background-color: rgb(135, 180, 190);
+}

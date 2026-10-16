@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./css/styles.css" rel="stylesheet" />
+    <title>Order Form for PriMate</title>
+  </head>
+  <body>
+    <header class="header__form">
+      <div class="button-container">
+        <a class="button__back" href="./index.html">Back to product page</a>
+      </div>
+      <h1 class="h1__form">PriTech</h1>
+    </header>
+    <main class="flex-container">
+      <h2 class="h2-form">PriMate Zero Order Form</h2>
+      <div class="flex-container">
+        <form class="flex-container__form">
+          <fieldset class="contact-info">
+            <legend class="form__legend">Contact Info</legend>
+            <label>First name:</label>
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              placeholder="King"
+              required
+            />
+            <label>Last name:</label>
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              placeholder="Kong"
+              required
+            />
+            <label>Email Address:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="pri@tech.com"
+              required
+            />
+            <label>Phone Number:</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" required />
+          </fieldset>
+          <fieldset class="product-options">
+            <legend class="form__legend">Product Options</legend>
+            <fieldset class="product-options__color">
+              <legend>Color</legend>
+              <label for="colorBanana">
+                <input
+                  name="deviceColor"
+                  type="radio"
+                  id="colorBanana"
+                  value="yellow"
+                  required
+                />
+                Banana Yellow
+              </label>
+              <label for="colorBlack">
+                <input
+                  name="deviceColor"
+                  type="radio"
+                  id="colorBlack"
+                  value="black"
+                />
+                Gorilla Black
+              </label>
+              <label for="colorOrange">
+                <input
+                  name="deviceColor"
+                  type="radio"
+                  id="colorOrange"
+                  value="orange"
+                />
+                Orange Orange
+              </label>
+            </fieldset>
+            <fieldset class="product-options__storage">
+              <legend>Storage</legend>
+              <label for="256gb">
+                <input
+                  name="deviceStorage"
+                  type="radio"
+                  id="256gb"
+                  value="256"
+                  required
+                />
+                256GB
+              </label>
+              <label for="512gb">
+                <input
+                  name="deviceStorage"
+                  type="radio"
+                  id="512gb"
+                  value="512"
+                />
+                512GB
+              </label>
+              <label for="1monkeybyte">
+                <input
+                  name="deviceStorage"
+                  type="radio"
+                  id="1monkeybyte"
+                  value="1monkeybyte"
+                />
+                1 MonkeyByte&trade;
+              </label>
+            </fieldset>
+            <fieldset class="product-options__optionals">
+              <legend>Optionals</legend>
+              <label for="deviceScent">
+                <input type="checkbox" id="deviceScent" name="optionals" />
+                Banana Scented (free)
+              </label>
+              <label for="deviceCoating">
+                <input type="checkbox" id="deviceCoating" name="optionals" />
+                Anti-stick Coating ($4.99)
+              </label>
+              <label for="device">
+                <input type="checkbox" id="device" name="optionals" />
+                Licensed ringtones from top artists ($2.99/month)
+              </label>
+              <label for="deviceInsurance">
+                <input type="checkbox" id="deviceInsurance" name="optionals" />
+                Full PriTech Insurance ($39.99/yearly)
+              </label>
+            </fieldset>
+          </fieldset>
+          <div class="order-disclaimer">
+            <h3>Note</h3>
+            <p>
+              Orders are final after product has been sent.<br />If you want to
+              add something or make changes to your order before it's sent,
+              <br />
+              reply to the order confirmation and your order will be put on
+              pause until a member of our team can get back to you.
+            </p>
+          </div>
+          <input class="button-form__submit" type="submit" value="Send order" />
+        </form>
+      </div>
+    </main>
+    <footer class="footer">
+      <div>
+        <p>
+          <b>DISCLAIMER:</b> This page is a student project and was created for
+          educational purposes, and is not an official or affiliated website.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
