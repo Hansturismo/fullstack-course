@@ -6,9 +6,16 @@
 }
 
 :root {
-  --card-bg-color: rgb(135, 174, 190);
+  /* Colors */
+  --card-bg-color: #3d5058;
   --card-border-color: black;
-  --bg-color: rgb(126, 126, 126);
+  --bg-color: rgba(30, 33, 40);
+  --card-grid-title-bg-color: rgb(135, 174, 190);
+  --font-color-dark: black;
+  --font-color-bright: #f5f5f5;
+  --font-size-small: 1rem;
+  --font-size-medium: 1.5rem;
+  --font-size-large: 2rem;
 }
 
 body {
@@ -23,8 +30,9 @@ body {
 
 header {
   display: flex;
+  flex: 0 1 0;
   width: 100%;
-  height: 3vh;
+  height: 6vh;
   justify-content: space-around;
   align-items: center;
   margin-bottom: auto;
@@ -42,13 +50,11 @@ main {
 }
 
 .divider {
+  display: flex;
   width: 100%;
-  background-color: var(--card-bg-color);
+  background-color: black;
+  color: var(--font-color-bright);
   height: 3vh;
-}
-
-.section_title {
-
 }
 
 .flex-content {
@@ -57,49 +63,87 @@ main {
   margin: 0.2rem 0 0.2rem 0;
 }
 
-.card-container__row {
+.header-container {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: start;
-  width: 100%;
-  gap: 4rem;
-  margin: 0.2rem 0 0.2rem 0;
+  height: 100%;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-container__team-logo {
+  object-fit: cover;
+  height: 20;
 }
 
 .team-introduction {
-  background-color: lightblue;
+  color: var(--font-color-bright);
   padding: 0.8rem;
   border-radius: 0.5rem;
 }
 
-.card-grid-title__active-players,
-.card-grid-title__managers-members,
-.card-grid-title__former-players {
+.flex-container__row {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  gap: 2rem;
+  padding-bottom: 0.5rem;
+  /* margin: 0.2rem 0 0.2rem 0; */
+}
+.flex-container__column {
+  display: flex;
+  flex: 0 1 50rem;
+  min-width: 0;
+  position: relative;
+  flex-direction: column;
+  justify-content: start;
+  align-items: stretch;
+}
+
+.card-container__background::before {
+  content: "";
   position: absolute;
+  inset: 0;
+  opacity: 60%;
+  background-image: url(../assets/images/backgrounds/DSG\ Apex\ Header.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.title-test {
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: space-evenly;
+  color: white;
+}
+
+.card-grid-title__active-players,
+.card-grid-title__members,
+.card-grid-title__former-players {
   text-align: center;
-  background-color: blanchedalmond;
   width: auto;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 20px;
-  margin: 0.5rem 0rem 0rem 0;
+  border-radius: 1.5rem 0 1rem 0;
   padding: 0.5rem;
+  color: var(--font-color-bright);
+  /* background-color: var(--card-grid-title-bg-color); */
 }
 
 .card-grid__active-players,
-.card-grid__managers-members {
+.card-grid__members {
   display: grid;
   position: relative;
   justify-content: center;
-  width: auto;
-  /* border: 1px solid sienna; */
-  border-radius: 1rem;
-  grid-template-columns: repeat(3, 15.5rem);
-  grid-auto-rows: 21rem;
-  column-gap: 1rem;
-  row-gap: 1rem;
-  padding: 3.5rem 0.5rem 0.5rem 0.5rem;
+  max-width: 50rem;
+  grid-template-columns: repeat(auto-fit, 15.5rem);
+  grid-auto-rows: auto;
+  gap: 1rem;
 }
 
 .card-grid__former-players {
@@ -107,36 +151,89 @@ main {
   position: relative;
   justify-content: center;
   width: auto;
-  /* border: 1px solid sienna; */
   border-radius: 1rem;
-  grid-template-columns: repeat(2, 15.5rem);
-  grid-auto-rows: 21rem;
-  column-gap: 1rem;
-  row-gap: 1rem;
-  padding: 3.5rem 0.5rem 0.5rem 0.5rem;
+  grid-template-columns: repeat(auto-fit, 15.5rem);
+  grid-auto-rows: auto;
+  gap: 1rem;
 }
 
-/* using selectors and combinators, we select the last child of the parent, 
-but since there's an unrelated child (an <h2> title with position: absolute)in the same grid,
-we filter it to only count .grid_item */
-.card-grid__active-players > :last-child:nth-child(3n + 1 of .grid-item),
-.card-grid__managers-members > :last-child:nth-child(3n + 1 of .grid-item) {
-  grid-column: 2;
-}
-
-.grid-item {
+.grid-item__member {
   gap: 0.5rem;
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  background-color: var(--card-bg-color);
   border: 1.5px solid var(--card-border-color);
   border-radius: 8px;
+  transform: scale(1);
+  transition: transform 100ms ease;
+  z-index: 3;
 }
 
-.grid-item:hover {
-  transform: scale(1.01);
+.grid-item__member:hover {
+  transform: scale(1.05);
+  transition: transform 100ms ease;
+}
+
+.grid-item__background::before {
+  content: "";
+  background-color: var(--card-bg-color);
+  border-radius: 8px;
+  opacity: 90%;
+  transition: opacity 1s ease;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.grid-item__background:hover::before {
+  opacity: 1;
+  transition: opacity 200ms ease;
+}
+
+.container__portrait-text {
+  z-index: 3;
+}
+
+.member-portrait {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  /* If we wanted, with a little bit of javascript we could have 
+  the background-image below show up instead of <img> in case it
+  fails to load. Currently it just sits behind every portrait.  */
+  background-image: url(../assets/icons/na.svg);
+  z-index: 3;
+}
+
+.no-portrait {
+  display: flex;
+  fill: whitesmoke;
+  stroke: whitesmoke;
+  height: 100%;
+  /* justify-content: center; */
+}
+
+.member-text {
+}
+
+.member-portrait__border {
+  display: flex;
+  height: 180px;
+  width: 140px;
+  /* background-color: var(--card-bg-color); */
+  border: 1.5px solid black;
+  border-radius: 10px;
+  z-index: 3;
+}
+
+.member-id {
+  /* border-bottom: 1px solid black; */
+  font-size: var(--font-size-large);
+  color: var(--font-color-bright);
+  z-index: 3;
 }
 
 .member-details {
@@ -146,62 +243,42 @@ we filter it to only count .grid_item */
   width: 100%;
   border-top: 1.5px solid black;
   padding: 0.3rem 0.3rem 0 0.3rem;
+  z-index: 3;
 }
 
-.member-id {
-  /* border-bottom: 1px solid black; */
-  font-size: x-large;
-}
-
-.member-name,
-.member-role,
-.member-join-date,
-.member-depart-date,
-.member-nationality {
+.member-details__name,
+.member-details__role,
+.member-details__joined,
+.member-details__departed,
+.member-details__nationality {
   display: flex;
   align-items: center;
   height: 1.5rem;
   justify-content: space-between;
+  z-index: 3;
 }
 
-.member-name h3,
-.member-role h3,
-.member-join-date h3,
-.member-depart-date h3,
-.member-nationality h3 {
-  font-size:medium;
+.member-details__name h3,
+.member-details__role h3,
+.member-details__joined h3,
+.member-details__departed h3,
+.member-details__nationality h3 {
+  font-size: var(--font-size-small);
+  color: var(--font-color-bright);
   text-align: left;
+  z-index: 3;
 }
 
-.member-name p,
-.member-role p,
-.member-join-date p,
-.member-depart-date p,
-.member-nationality p {
+.member-details__name p,
+.member-details__role p,
+.member-details__joined p,
+.member-details__departede p,
+.member-details__nationality p {
+  font-size: var(--font-size-small);
+  color: var(--font-color-bright);
   text-decoration: underline;
   text-align: right;
-}
-
-.member-image__placeholder {
-  background-image: url(/HenrikHorsdal_160229/assignment_2/assets/icons/user-solid-full.svg);
-  height: 160px;
-  width: 120px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  border: 1.5px solid black;
-  border-radius: 10px;
-}
-
-.member-image__scyle {
-  height: 160px;
-  width: 120px;
-  background-image: url(/HenrikHorsdal_160229/assignment_2/assets/images/image-8.webp);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  border: 1.5px solid black;
-  border-radius: 10px;
+  z-index: 3;
 }
 
 footer {

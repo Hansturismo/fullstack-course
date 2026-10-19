@@ -10,332 +10,539 @@
   <body>
     <!-- Header with project description link -->
     <header>
-      <div class="">Project Description</div>
-      <div class="team-title">OWCS Team Disguised</div>
-      <div class="">INFO PLACEHOLDER</div>
+      <div class="header-container">
+        <p></p>
+      </div>
+      <div class="header-container">
+        <img
+          class="header-container__team-logo"
+          src="./assets/images/backgrounds/team-title.png"
+          title="Team Disguised logo"
+          alt="Team Disguised logo"
+        />
+      </div>
+      <div class="">
+        <p></p>
+      </div>
     </header>
     <main>
       <div class="flex-content">
         <div class="team-introduction">
-          <p>Lorem ipsum dolor sit amet.</p>
+          <p>Welcome to an overview of the Overwatch esports Team Disguised.</p>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet,
-            odio!
+            Disguised is a North American Overwatch team, founded by YouTuber
+            and streamer Disguised Toast.
           </p>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur
-            atque alias nulla deleniti sequi, ad asperiores? Quidem vitae
-            excepturi natus?
+            Note: This site is a student project and is neither official nor
+            endorsed by Team Disguised or the Overwatch Esports scene.
           </p>
         </div>
       </div>
+      <div class="divider"></div>
       <!-- Content container, shows current players and managers/members -->
-      <div class="card-container__row">
-        <!-- Collects all grid-items in a 3xAuto grid layout, last item centered under middle column if not 3x3 -->
-        <div class="card-grid__active-players">
-          <h2 class="card-grid-title__active-players">Active Players</h2>
-
-          <!-- Item 1 -->
-          <div class="grid-item">
-            <div class="member-id">
-              <h2 class="member-id">PGE</h2>
-            </div>
-            <div class="member-image__placeholder"></div>
-            <div class="member-details">
-              <div class="member-name">
-                <h3>Name:</h3>
-                <p>Evan Ngo</p>
-              </div>
-              <div class="member-role">
-                <h3>Game Role:</h3>
-                <p>DPS</p>
-              </div>
-              <div class="member-join-date">
-                <h3>Join Date:</h3>
-                <p>2026-01-30</p>
-              </div>
-              <div class="member-nationality">
-                <h3>Country:</h3>
-                <div class="flag-us"></div>
-              </div>
-            </div>
+      <div class="flex-container__row card-container__background">
+        <div class="flex-container__column">
+          <div class="card-grid-title__active-players">
+            <h2>Players</h2>
           </div>
-          <!-- Item 2 -->
-          <div class="grid-item">
-            <div class="member-id">
-              <h2 class="member-id">Scyle</h2>
-            </div>
-            <div class="member-image__scyle"></div>
-            <div class="member-details">
-              <div class="member-name">
-                <h3>Name:</h3>
-                <p>Simon Broström</p>
+          <div class="card-grid__active-players">
+            <!-- Item 1 -->
+            <div class="grid-item__member grid-item__background">
+              <div class="member-id">
+                <h2 class="member-id">PGE</h2>
               </div>
-              <div class="member-role">
-                <h3>Game Role:</h3>
-                <p>Support</p>
+              <div class="container__portrait-text">
+                <div class="member-portrait__border">
+                  <img
+                    class="member-portrait"
+                    src="./assets/images/portraits/pge.png"
+                    title="PGE at Overwatch CS series"
+                    alt="PGE portrait"
+                  />
+                </div>
+                <p class="member-text"></p>
               </div>
-              <div class="member-join-date">
-                <h3>Join Date:</h3>
-                <p>2026-01-30</p>
-              </div>
-              <div class="member-nationality">
-                <h3>Country:</h3>
-                <div class="flag-se"></div>
-              </div>
-            </div>
-          </div>
-          <!-- Item 3 -->
-          <div class="grid-item">
-            <div class="member-id">
-              <h2 class="member-id">Ryan</h2>
-            </div>
-            <div class="member-image__placeholder"></div>
-            <div class="member-details">
-              <div class="member-name">
-                <h3>Name:</h3>
-                <p>Ryan Micheal Lawless</p>
-              </div>
-              <div class="member-role">
-                <h3>Game Role:</h3>
-                <p>DPS</p>
-              </div>
-              <div class="member-join-date">
-                <h3>Join Date:</h3>
-                <p>2026-09-28</p>
-              </div>
-              <div class="member-nationality">
-                <h3>Country:</h3>
-                <div class="flag-us"></div>
+              <div class="member-details">
+                <div class="member-details__name">
+                  <h3>Name:</h3>
+                  <p>Evan Ngo</p>
+                </div>
+                <div class="member-details__role">
+                  <h3>Role:</h3>
+                  <p>DPS</p>
+                </div>
+                <div class="member-details__joined">
+                  <h3>Join Date:</h3>
+                  <p>2026-01-30</p>
+                </div>
+                <div class="member-details__nationality">
+                  <h3>Country:</h3>
+                  <div class="flag-us"></div>
+                </div>
               </div>
             </div>
-          </div>
-          <!-- Item 4 -->
-          <div class="grid-item">
-            <div class="member-id">
-              <h2 class="member-id">Tred</h2>
-            </div>
-            <div class="member-image__placeholder"></div>
-            <div class="member-details">
-              <div class="member-name">
-                <h3>Name:</h3>
-                <p>Alexander Madwick-Smith</p>
+            <!-- Item 2 -->
+            <div class="grid-item__member grid-item__background">
+              <div class="member-id">
+                <h2 class="member-id">Scyle</h2>
               </div>
-              <div class="member-role">
-                <h3>Game Role:</h3>
-                <p>Tank</p>
+              <div class="container__portrait-text">
+                <div class="member-portrait__border">
+                  <img
+                    class="member-portrait"
+                    src="./assets/images/portraits/scyle.png"
+                    title="Scuffed stream screenshot of Scyle"
+                    alt="Scyle portrait"
+                  />
+                </div>
+                <p class="member-text"></p>
               </div>
-              <div class="member-join-date">
-                <h3>Join Date:</h3>
-                <p>2026-01-30</p>
-              </div>
-              <div class="member-nationality">
-                <h3>Country:</h3>
-                <div class="flag-uk"></div>
-              </div>
-            </div>
-          </div>
-          <!-- Item 5 -->
-          <div class="grid-item">
-            <div class="member-id">
-              <h2 class="member-id">smurf</h2>
-            </div>
-            <div class="member-image__placeholder"></div>
-            <div class="member-details">
-              <div class="member-name">
-                <h3>Name:</h3>
-                <p>Yoo Myeong-hwan</p>
-              </div>
-              <div class="member-role">
-                <h3>Game Role:</h3>
-                <p>Tank</p>
-              </div>
-              <div class="member-join-date">
-                <h3>Join Date:</h3>
-                <p>2026-09-28</p>
-              </div>
-              <div class="member-nationality">
-                <h3>Country:</h3>
-                <div class="flag-kr"></div>
+              <div class="member-details">
+                <div class="member-details__name">
+                  <h3>Name:</h3>
+                  <p>Simon Broström</p>
+                </div>
+                <div class="member-details__role">
+                  <h3>Role:</h3>
+                  <p>Support</p>
+                </div>
+                <div class="member-details__joined">
+                  <h3>Join Date:</h3>
+                  <p>2026-01-30</p>
+                </div>
+                <div class="member-details__nationality">
+                  <h3>Country:</h3>
+                  <div class="flag-se"></div>
+                </div>
               </div>
             </div>
-          </div>
-          <!-- Item 6 -->
-          <div class="grid-item">
-            <div class="member-id">
-              <h2 class="member-id">KiWii</h2>
+            <!-- Item 3 -->
+            <div class="grid-item__member grid-item__background">
+              <div class="member-id">
+                <h2 class="member-id">Ryan</h2>
+              </div>
+              <div class="container__portrait-text">
+                <div class="member-portrait__border">
+                  <img
+                    class="member-portrait no-portrait"
+                    src="./assets/icons/user-solid-full.svg"
+                    title="No readily available picture of Ryan"
+                    alt="Ryan portrait"
+                  />
+                </div>
+                <p class="member-text"></p>
+              </div>
+              <div class="member-details">
+                <div class="member-details__name">
+                  <h3>Name:</h3>
+                  <p>Ryan Micheal Lawless</p>
+                </div>
+                <div class="member-details__role">
+                  <h3>Role:</h3>
+                  <p>DPS</p>
+                </div>
+                <div class="member-details__joined">
+                  <h3>Join Date:</h3>
+                  <p>2026-09-28</p>
+                </div>
+                <div class="member-details__nationality">
+                  <h3>Country:</h3>
+                  <div class="flag-us"></div>
+                </div>
+              </div>
             </div>
-            <div class="member-image__placeholder"></div>
-            <div class="member-details">
-              <div class="member-name">
-                <h3>Name:</h3>
-                <p>Willem Ryan</p>
+            <!-- Item 4 -->
+            <div class="grid-item__member grid-item__background">
+              <div class="member-id">
+                <h2 class="member-id">Tred</h2>
               </div>
-              <div class="member-role">
-                <h3>Game Role:</h3>
-                <p>Support</p>
+              <div class="container__portrait-text">
+                <div class="member-portrait__border">
+                  <img
+                    class="member-portrait"
+                    src="./assets/images/portraits/tred.png"
+                    title="Tred at the 2024 Esports World Cup"
+                    alt="Tred portrait"
+                  />
+                </div>
+                <p class="member-text"></p>
               </div>
-              <div class="member-join-date">
-                <h3>Join Date:</h3>
-                <p>2026-06-09</p>
-              </div>
-              <div class="member-nationality">
-                <h3>Country:</h3>
-                <div class="flag-uk"></div>
+              <div class="member-details">
+                <div class="member-details__name">
+                  <h3>Name:</h3>
+                  <p>Alexander Madwick-Smith</p>
+                </div>
+                <div class="member-details__role">
+                  <h3>Role:</h3>
+                  <p>Tank</p>
+                </div>
+                <div class="member-details__joined">
+                  <h3>Join Date:</h3>
+                  <p>2026-01-30</p>
+                </div>
+                <div class="member-details__nationality">
+                  <h3>Country:</h3>
+                  <div class="flag-uk"></div>
+                </div>
               </div>
             </div>
-          </div>
-          <!-- Item 7 -->
-          <div class="grid-item">
-            <div class="member-id">
-              <h2 class="member-id">alex</h2>
+            <!-- Item 5 -->
+            <div class="grid-item__member grid-item__background">
+              <div class="member-id">
+                <h2 class="member-id">smurf</h2>
+              </div>
+              <div class="container__portrait-text">
+                <div class="member-portrait__border">
+                  <img
+                    class="member-portrait"
+                    src="./assets/images/portraits/smurf.png"
+                    title="Smurf at OWCS Dreamhack"
+                    alt="smurf portrait"
+                  />
+                </div>
+                <p class="member-text"></p>
+              </div>
+              <div class="member-details">
+                <div class="member-details__name">
+                  <h3>Name:</h3>
+                  <p>Yoo Myeong-hwan</p>
+                </div>
+                <div class="member-details__role">
+                  <h3>Role:</h3>
+                  <p>Tank</p>
+                </div>
+                <div class="member-details__joined">
+                  <h3>Join Date:</h3>
+                  <p>2026-09-28</p>
+                </div>
+                <div class="member-details__nationality">
+                  <h3>Country:</h3>
+                  <div class="flag-kr"></div>
+                </div>
+              </div>
             </div>
-            <div class="member-image__placeholder"></div>
-            <div class="member-details">
-              <div class="member-name">
-                <h3>Name:</h3>
-                <p>Alex George</p>
+            <!-- Item 6 -->
+            <div class="grid-item__member grid-item__background">
+              <div class="member-id">
+                <h2 class="member-id">KiWii</h2>
               </div>
-              <div class="member-role">
-                <h3>Game Role:</h3>
-                <p>DPS (substitute)</p>
+              <div class="container__portrait-text">
+                <div class="member-portrait__border">
+                  <img
+                    class="member-portrait"
+                    src="./assets/icons/user-solid-full.svg"
+                    title="No readily available picture of KiWii"
+                    alt="Tred portrait"
+                  />
+                </div>
+                <p class="member-text"></p>
               </div>
-              <div class="member-join-date">
-                <h3>Join Date:</h3>
-                <p>2026-09-28</p>
+              <div class="member-details">
+                <div class="member-details__name">
+                  <h3>Name:</h3>
+                  <p>Willem Ryan</p>
+                </div>
+                <div class="member-details__role">
+                  <h3>Role:</h3>
+                  <p>Support</p>
+                </div>
+                <div class="member-details__joined">
+                  <h3>Join Date:</h3>
+                  <p>2026-06-09</p>
+                </div>
+                <div class="member-details__nationality">
+                  <h3>Country:</h3>
+                  <div class="flag-uk"></div>
+                </div>
               </div>
-              <div class="member-nationality">
-                <h3>Country:</h3>
-                <div class="flag-ca"></div>
+            </div>
+            <!-- Item 7 -->
+            <div class="grid-item__member grid-item__background">
+              <div class="member-id">
+                <h2 class="member-id">alex</h2>
+              </div>
+              <div class="container__portrait-text">
+                <div class="member-portrait__border">
+                  <img
+                    class="member-portrait"
+                    src="./assets/icons/user-solid-full.svg"
+                    title="No readily available picture of alex"
+                    alt="alex portrait"
+                  />
+                </div>
+                <p class="member-text"></p>
+              </div>
+              <div class="member-details">
+                <div class="member-details__name">
+                  <h3>Name:</h3>
+                  <p>Alex George</p>
+                </div>
+                <div class="member-details__role">
+                  <h3>Role:</h3>
+                  <p>DPS (substitute)</p>
+                </div>
+                <div class="member-details__joined">
+                  <h3>Join Date:</h3>
+                  <p>2026-09-28</p>
+                </div>
+                <div class="member-details__nationality">
+                  <h3>Country:</h3>
+                  <div class="flag-ca"></div>
+                </div>
+              </div>
+            </div>
+            <!-- meme 1 -->
+            <div class="grid-item__member grid-item__background">
+              <div class="member-id">
+                <h2 class="member-id">Blue</h2>
+              </div>
+              <div class="container__portrait-text">
+                <div class="member-portrait__border">
+                  <img
+                    class="member-portrait"
+                    src="./assets/images/portraits/hennessy.png"
+                    title="Blue holding a bottle of Hennessy"
+                    alt="blue portrait"
+                  />
+                </div>
+                <p class="member-text"></p>
+              </div>
+              <div class="member-details">
+                <div class="member-details__name">
+                  <h3>Name:</h3>
+                  <p>Miro Ramljak</p>
+                </div>
+                <div class="member-details__role">
+                  <h3>Role:</h3>
+                  <p>DPS (skinny on Juno)</p>
+                </div>
+                <div class="member-details__joined">
+                  <h3>Join Date:</h3>
+                  <p>2067-01-01</p>
+                </div>
+                <div class="member-details__nationality">
+                  <h3>Country:</h3>
+                  <div class="bosnia-demon"></div>
+                </div>
+              </div>
+            </div>
+            <!-- meme 2 -->
+            <div class="grid-item__member grid-item__background">
+              <div class="member-id">
+                <h2 class="member-id">Godspeed</h2>
+              </div>
+              <div class="container__portrait-text">
+                <div class="member-portrait__border">
+                  <img
+                    class="member-portrait"
+                    src="./assets/images/portraits/winton3.png"
+                    title="No readily available picture of alex"
+                    alt="alex portrait"
+                  />
+                </div>
+                <p class="member-text"></p>
+              </div>
+              <div class="member-details">
+                <div class="member-details__name">
+                  <h3>Name:</h3>
+                  <p>Malcolm Deepsdog(?)</p>
+                </div>
+                <div class="member-details__role">
+                  <h3>Role:</h3>
+                  <p>Tank (jump)</p>
+                </div>
+                <div class="member-details__joined">
+                  <h3>Join Date:</h3>
+                  <p>?</p>
+                </div>
+                <div class="member-details__nationality">
+                  <h3>Country:</h3>
+                  <div class="flag-se"></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
         <!-- Managers & members grid -->
-        <div class="card-grid__managers-members">
-          <h2 class="card-grid-title__managers-members">Managers/Members</h2>
-
-          <div class="grid-item">
-            <div class="member-id">
-              <h2 class="member-id">Disguised Toast</h2>
-            </div>
-            <div class="member-image__placeholder"></div>
-            <div class="member-details">
-              <div class="member-name">
-                <h3>Name:</h3>
-                <p>Jeremy Wang</p>
-              </div>
-              <div class="member-role">
-                <h3>Position:</h3>
-                <p>Founder</p>
-              </div>
-              <div class="member-join-date">
-                <h3>Join Date:</h3>
-                <p>2023-01-08</p>
-              </div>
-              <div class="member-nationality">
-                <h3>Country:</h3>
-                <div class="flag-ca"></div>
-              </div>
-            </div>
+        <div class="flex-container__column">
+          <div class="card-grid-title__members">
+            <h2>Members</h2>
           </div>
-          <!-- Item 2 -->
-          <div class="grid-item">
-            <div class="member-id">
-              <h2 class="member-id">Zei</h2>
-            </div>
-            <div class="member-image__placeholder"></div>
-            <div class="member-details">
-              <div class="member-name">
-                <h3>Name:</h3>
-                <p>Robin Sidhu</p>
+          <div class="card-grid__members">
+            <!-- Item 1 -->
+            <div class="grid-item__member grid-item__background">
+              <div class="member-id">
+                <h2 class="member-id">Disguised Toast</h2>
               </div>
-              <div class="member-role">
-                <h3>Position:</h3>
-                <p>Ass. Coach</p>
+              <div class="container__portrait-text">
+                <div class="member-portrait__border">
+                  <img
+                    class="member-portrait"
+                    src="./assets/images/portraits/disguisedtoast.jpg"
+                    title="Toast at TFT Vegas Open 2023"
+                    alt="alex portrait"
+                  />
+                </div>
+                <p class="member-text"></p>
               </div>
-              <div class="member-join-date">
-                <h3>Join Date:</h3>
-                <p>2026-01-30</p>
-              </div>
-              <div class="member-nationality">
-                <h3>Country:</h3>
-                <div class="flag-ca"></div>
-              </div>
-            </div>
-          </div>
-          <!-- Item 3 -->
-          <div class="grid-item">
-            <div class="member-id">
-              <h2 class="member-id">yeHHH</h2>
-            </div>
-            <div class="member-image__placeholder"></div>
-            <div class="member-details">
-              <div class="member-name">
-                <h3>Name:</h3>
-                <p>Albert Yeh</p>
-              </div>
-              <div class="member-role">
-                <h3>Position:</h3>
-                <p>General Manager</p>
-              </div>
-              <div class="member-join-date">
-                <h3>Join Date:</h3>
-                <p>2026-01-30</p>
-              </div>
-              <div class="member-nationality">
-                <h3>Country:</h3>
-                <div class="flag-us"></div>
+              <div class="member-details">
+                <div class="member-details__name">
+                  <h3>Name:</h3>
+                  <p>Jeremy Wang</p>
+                </div>
+                <div class="member-details__role">
+                  <h3>Position:</h3>
+                  <p>Founder</p>
+                </div>
+                <div class="member-details__joined">
+                  <h3>Join Date:</h3>
+                  <p>2023-01-08</p>
+                </div>
+                <div class="member-details__nationality">
+                  <h3>Country:</h3>
+                  <div class="flag-ca"></div>
+                </div>
               </div>
             </div>
-          </div>
-          <!-- Item 4 -->
-          <div class="grid-item">
-            <div class="member-id">
-              <h2 class="member-id">ThatAFKNoob</h2>
+            <!-- Item 2 -->
+            <div class="grid-item__member grid-item__background">
+              <div class="member-id">
+                <h2 class="member-id">McGravy</h2>
+              </div>
+              <div class="container__portrait-text">
+                <div class="member-portrait__border">
+                  <img
+                    class="member-portrait"
+                    src="./assets/images/portraits/mcgravy.png"
+                    title="McGravy at the 2024 esports world cup"
+                    alt="alex portrait"
+                  />
+                </div>
+                <p class="member-text"></p>
+              </div>
+              <div class="member-details">
+                <div class="member-details__name">
+                  <h3>Name:</h3>
+                  <p>Caleb McGarvey</p>
+                </div>
+                <div class="member-details__role">
+                  <h3>Position:</h3>
+                  <p>Head Coach</p>
+                </div>
+                <div class="member-details__joined">
+                  <h3>Join Date:</h3>
+                  <p>2026-07-01</p>
+                </div>
+                <div class="member-details__nationality">
+                  <h3>Country:</h3>
+                  <div class="flag-us"></div>
+                </div>
+              </div>
             </div>
-            <div class="member-image__placeholder"></div>
-            <div class="member-details">
-              <div class="member-name">
-                <h3>Name:</h3>
-                <p>Ryan Cohen</p>
+            <!-- Item 3 -->
+            <div class="grid-item__member grid-item__background">
+              <div class="member-id">
+                <h2 class="member-id">Zei</h2>
               </div>
-              <div class="member-role">
-                <h3>Position:</h3>
-                <p>Manager</p>
+              <div class="container__portrait-text">
+                <div class="member-portrait__border">
+                  <img
+                    class="member-portrait"
+                    src="./assets/icons/user-solid-full.svg"
+                    title="No readily available picture of Zei"
+                    alt="Zei portrait"
+                  />
+                </div>
+                <p class="member-text"></p>
               </div>
-              <div class="member-join-date">
-                <h3>Join Date:</h3>
-                <p>2026-01-30</p>
-              </div>
-              <div class="member-nationality">
-                <h3>Country:</h3>
-                <div class="flag-ca"></div>
+              <div class="member-details">
+                <div class="member-details__name">
+                  <h3>Name:</h3>
+                  <p>Robin Sidhu</p>
+                </div>
+                <div class="member-details__role">
+                  <h3>Position:</h3>
+                  <p>Ass. Coach</p>
+                </div>
+                <div class="member-details__joined">
+                  <h3>Join Date:</h3>
+                  <p>2026-01-30</p>
+                </div>
+                <div class="member-details__nationality">
+                  <h3>Country:</h3>
+                  <div class="flag-ca"></div>
+                </div>
               </div>
             </div>
-          </div>
-          <!-- Item 5 -->
-          <div class="grid-item">
-            <div class="member-id">
-              <h2 class="member-id">McGravy</h2>
+            <!-- Item 4 -->
+            <div class="grid-item__member grid-item__background">
+              <div class="member-id">
+                <h2 class="member-id">yeHHH</h2>
+              </div>
+              <div class="container__portrait-text">
+                <div class="member-portrait__border">
+                  <img
+                    class="member-portrait"
+                    src="./assets/icons/user-solid-full.svg"
+                    title="No readily available picture of yeHHH"
+                    alt="yeHHH portrait"
+                  />
+                </div>
+                <p class="member-text"></p>
+              </div>
+              <div class="member-details">
+                <div class="member-details__name">
+                  <h3>Name:</h3>
+                  <p>Albert Yeh</p>
+                </div>
+                <div class="member-details__role">
+                  <h3>Position:</h3>
+                  <p>General Manager</p>
+                </div>
+                <div class="member-details__joined">
+                  <h3>Join Date:</h3>
+                  <p>2026-01-30</p>
+                </div>
+                <div class="member-details__nationality">
+                  <h3>Country:</h3>
+                  <div class="flag-us"></div>
+                </div>
+              </div>
             </div>
-            <div class="member-image__placeholder"></div>
-            <div class="member-details">
-              <div class="member-name">
-                <h3>Name:</h3>
-                <p>Caleb McGarvey</p>
+            <!-- Item 5 -->
+            <div class="grid-item__member grid-item__background">
+              <div class="member-id">
+                <h2 class="member-id">ThatAFKNoob</h2>
               </div>
-              <div class="member-role">
-                <h3>Position:</h3>
-                <p>Head Coach</p>
+              <div class="container__portrait-text">
+                <div class="member-portrait__border">
+                  <img
+                    class="member-portrait"
+                    src="./assets/icons/user-solid-full.svg"
+                    title="No readily available picture of ThatAFKNoob"
+                    alt="ThatAFKNoob portrait"
+                  />
+                </div>
+                <p class="member-text"></p>
               </div>
-              <div class="member-join-date">
-                <h3>Join Date:</h3>
-                <p>2026-07-01</p>
-              </div>
-              <div class="member-nationality">
-                <h3>Country:</h3>
-                <div class="flag-us"></div>
+              <div class="member-details">
+                <div class="member-details__name">
+                  <h3>Name:</h3>
+                  <p>Ryan Cohen</p>
+                </div>
+                <div class="member-details__role">
+                  <h3>Position:</h3>
+                  <p>Manager</p>
+                </div>
+                <div class="member-details__joined">
+                  <h3>Join Date:</h3>
+                  <p>2026-01-30</p>
+                </div>
+                <div class="member-details__nationality">
+                  <h3>Country:</h3>
+                  <div class="flag-ca"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -344,241 +551,325 @@
       <div class="divider">
         <h2>Former</h2>
       </div>
-      <div class="card-container__row">
-        <div class="card-grid__former-players">
-          <h2 class="card-grid-title__former-players">Former players</h2>
-          <!-- Item 1 -->
-          <div class="grid-item">
-            <div class="member-id">
-              <h2 class="member-id">Rokit</h2>
-            </div>
-            <div class="member-image__placeholder"></div>
-            <div class="member-details">
-              <div class="member-name">
-                <h3>Name:</h3>
-                <p>Julian Pizana</p>
+      <div class="flex-container__row">
+        <div class="flex-container__column">
+          <h2 class="title-test">Players</h2>
+          <div class="card-grid__former-players">
+            <!-- Item 1 -->
+            <div class="grid-item__member grid-item__background">
+              <div class="member-id">
+                <h2 class="member-id">Rokit</h2>
               </div>
-              <div class="member-role">
-                <h3>Game Role:</h3>
-                <p>DPS</p>
+              <div class="container__portrait-text">
+                <div class="member-portrait__border">
+                  <img
+                    class="member-portrait"
+                    src="./assets/icons/user-solid-full.svg"
+                    title="No readily available picture of Zei"
+                    alt="ThatAFKNoob portrait"
+                  />
+                </div>
+                <p class="member-text"></p>
               </div>
-              <div class="member-join-date">
-                <h3>Join Date:</h3>
-                <p>2026-01-30</p>
-              </div>
-              <div class="member-depart-date">
-                <h3>Depart Date:</h3>
-                <p>2026-08-17</p>
-              </div>
-              <div class="member-nationality">
-                <h3>Country:</h3>
-                <div class="flag-us"></div>
-              </div>
-            </div>
-          </div>
-          <!-- Item 2 -->
-           <div class="grid-item">
-            <div class="member-id">
-              <h2 class="member-id">Lep</h2>
-            </div>
-            <div class="member-image__placeholder"></div>
-            <div class="member-details">
-              <div class="member-name">
-                <h3>Name:</h3>
-                <p>Joseph Cambriani</p>
-              </div>
-              <div class="member-role">
-                <h3>Game Role:</h3>
-                <p>Support</p>
-              </div>
-              <div class="member-join-date">
-                <h3>Join Date:</h3>
-                <p>2026-01-30</p>
-              </div>
-              <div class="member-depart-date">
-                <h3>Depart Date:</h3>
-                <p>2026-06-09</p>
-              </div>
-              <div class="member-nationality">
-                <h3>Country:</h3>
-                <div class="flag-us"></div>
+              <div class="member-details">
+                <div class="member-details__name">
+                  <h3>Name:</h3>
+                  <p>Julian Pizana</p>
+                </div>
+                <div class="member-details__role">
+                  <h3>Role:</h3>
+                  <p>DPS</p>
+                </div>
+                <div class="member-details__joined">
+                  <h3>Join Date:</h3>
+                  <p>2026-01-30</p>
+                </div>
+                <div class="member-details__departed">
+                  <h3>Depart Date:</h3>
+                  <p>2026-01-30</p>
+                </div>
+                <div class="member-details__nationality">
+                  <h3>Country:</h3>
+                  <div class="flag-us"></div>
+                </div>
               </div>
             </div>
-          </div>
-          <!-- Item 3 -->
-           <div class="grid-item">
-            <div class="member-id">
-              <h2 class="member-id">Raikker</h2>
+            <!-- Item 2 -->
+            <div class="grid-item__member grid-item__background">
+              <div class="member-id">
+                <h2 class="member-id">Lep</h2>
+              </div>
+              <div class="container__portrait-text">
+                <div class="member-portrait__border">
+                  <img
+                    class="member-portrait"
+                    src="./assets/icons/user-solid-full.svg"
+                    title="No readily available picture of Lep"
+                    alt="Lep portrait"
+                  />
+                </div>
+                <p class="member-text"></p>
+              </div>
+              <div class="member-details">
+                <div class="member-details__name">
+                  <h3>Name:</h3>
+                  <p>Joseph Cambriani</p>
+                </div>
+                <div class="member-details__role">
+                  <h3>Role:</h3>
+                  <p>Support</p>
+                </div>
+                <div class="member-details__joined">
+                  <h3>Join Date:</h3>
+                  <p>2026-01-30</p>
+                </div>
+                <div class="member-details__departed">
+                  <h3>Depart Date:</h3>
+                  <p>2026-06-09</p>
+                </div>
+                <div class="member-details__nationality">
+                  <h3>Country:</h3>
+                  <div class="flag-us"></div>
+                </div>
+              </div>
             </div>
-            <div class="member-image__placeholder"></div>
-            <div class="member-details">
-              <div class="member-name">
-                <h3>Name:</h3>
-                <p>Julian Bevien-Guevarra</p>
+            <!-- Item 3 -->
+            <div class="grid-item__member grid-item__background">
+              <div class="member-id">
+                <h2 class="member-id">Raikker</h2>
               </div>
-              <div class="member-role">
-                <h3>Game Role:</h3>
-                <p>Tank (Substitute)</p>
+              <div class="container__portrait-text">
+                <div class="member-portrait__border">
+                  <img
+                    class="member-portrait"
+                    src="./assets/icons/user-solid-full.svg"
+                    title="No readily available picture of Lep"
+                    alt="Lep portrait"
+                  />
+                </div>
+                <p class="member-text"></p>
               </div>
-              <div class="member-join-date">
-                <h3>Join Date:</h3>
-                <p>2026-01-30</p>
-              </div>
-              <div class="member-depart-date">
-                <h3>Depart Date:</h3>
-                <p>2026-06-05</p>
-              </div>
-              <div class="member-nationality">
-                <h3>Country:</h3>
-                <div class="flag-us"></div>
+              <div class="member-details">
+                <div class="member-details__name">
+                  <h3>Name:</h3>
+                  <p>Julian Bevien-Guevarra</p>
+                </div>
+                <div class="member-details__role">
+                  <h3>Role:</h3>
+                  <p>Tank (Substitute)</p>
+                </div>
+                <div class="member-details__joined">
+                  <h3>Join Date:</h3>
+                  <p>2026-01-30</p>
+                </div>
+                <div class="member-details__departed">
+                  <h3>Depart Date:</h3>
+                  <p>2026-06-05</p>
+                </div>
+                <div class="member-details__nationality">
+                  <h3>Country:</h3>
+                  <div class="flag-us"></div>
+                </div>
               </div>
             </div>
-          </div>
-          <!-- Item 4 -->
-           <div class="grid-item">
-            <div class="member-id">
-              <h2 class="member-id">Reyzr</h2>
-            </div>
-            <div class="member-image__placeholder"></div>
-            <div class="member-details">
-              <div class="member-name">
-                <h3>Name:</h3>
-                <p>Jack Francis</p>
+            <!-- Item 4 -->
+            <div class="grid-item__member grid-item__background">
+              <div class="member-id">
+                <h2 class="member-id">Reyzr</h2>
               </div>
-              <div class="member-role">
-                <h3>Game Role:</h3>
-                <p>DPS (Substitute)</p>
+              <div class="container__portrait-text">
+                <div class="member-portrait__border">
+                  <img
+                    class="member-portrait"
+                    src="./assets/icons/user-solid-full.svg"
+                    title="No readily available picture of Lep"
+                    alt="Lep portrait"
+                  />
+                </div>
+                <p class="member-text"></p>
               </div>
-              <div class="member-join-date">
-                <h3>Join Date:</h3>
-                <p>2026-01-30</p>
-              </div>
-              <div class="member-depart-date">
-                <h3>Depart Date:</h3>
-                <p>2026-06-05</p>
-              </div>
-              <div class="member-nationality">
-                <h3>Country:</h3>
-                <div class="flag-us"></div>
+              <div class="member-details">
+                <div class="member-details__name">
+                  <h3>Name:</h3>
+                  <p>Jack Francis</p>
+                </div>
+                <div class="member-details__role">
+                  <h3>Role:</h3>
+                  <p>DPS (Substitute)</p>
+                </div>
+                <div class="member-details__joined">
+                  <h3>Join Date:</h3>
+                  <p>2026-01-30</p>
+                </div>
+                <div class="member-details__departed">
+                  <h3>Depart Date:</h3>
+                  <p>2026-06-05</p>
+                </div>
+                <div class="member-details__nationality">
+                  <h3>Country:</h3>
+                  <div class="flag-us"></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="card-grid__former-players">
-          <h2 class="card-grid-title__former-players">Former members</h2>
-          <!-- Item 1 -->
-          <div class="grid-item">
-            <div class="member-id">
-              <h2 class="member-id">Rokit</h2>
-            </div>
-            <div class="member-image__placeholder"></div>
-            <div class="member-details">
-              <div class="member-name">
-                <h3>Name:</h3>
-                <p>Julian Pizana</p>
+        <div class="flex-container__column">
+          <h2 class="title-test">Members</h2>
+          <div class="card-grid__former-players">
+            <!-- Item 1 -->
+            <div class="grid-item__member grid-item__background">
+              <div class="member-id">
+                <h2 class="member-id">Lep</h2>
               </div>
-              <div class="member-role">
-                <h3>Role:</h3>
-                <p>DPS</p>
+              <div class="container__portrait-text">
+                <div class="member-portrait__border">
+                  <img
+                    class="member-portrait"
+                    src="./assets/icons/user-solid-full.svg"
+                    title="No readily available picture of Lep"
+                    alt="Lep portrait"
+                  />
+                </div>
+                <p class="member-text"></p>
               </div>
-              <div class="member-join-date">
-                <h3>Join Date:</h3>
-                <p>2026-01-30</p>
-              </div>
-              <div class="member-depart-date">
-                <h3>Depart Date:</h3>
-                <p>2026-01-30</p>
-              </div>
-              <div class="member-nationality">
-                <h3>Country:</h3>
-                <div class="flag-us"></div>
-              </div>
-            </div>
-          </div>
-          <!-- Item 2 -->
-           <div class="grid-item">
-            <div class="member-id">
-              <h2 class="member-id">Rokit</h2>
-            </div>
-            <div class="member-image__placeholder"></div>
-            <div class="member-details">
-              <div class="member-name">
-                <h3>Name:</h3>
-                <p>Julian Pizana</p>
-              </div>
-              <div class="member-role">
-                <h3>Role:</h3>
-                <p>DPS</p>
-              </div>
-              <div class="member-join-date">
-                <h3>Join Date:</h3>
-                <p>2026-01-30</p>
-              </div>
-              <div class="member-depart-date">
-                <h3>Depart Date:</h3>
-                <p>2026-01-30</p>
-              </div>
-              <div class="member-nationality">
-                <h3>Country:</h3>
-                <div class="flag-us"></div>
+              <div class="member-details">
+                <div class="member-details__name">
+                  <h3>Name:</h3>
+                  <p>Joseph Cambriani</p>
+                </div>
+                <div class="member-details__role">
+                  <h3>Role:</h3>
+                  <p>Support</p>
+                </div>
+                <div class="member-details__joined">
+                  <h3>Join Date:</h3>
+                  <p>2026-01-30</p>
+                </div>
+                <div class="member-details__departed">
+                  <h3>Depart Date:</h3>
+                  <p>2026-06-09</p>
+                </div>
+                <div class="member-details__nationality">
+                  <h3>Country:</h3>
+                  <div class="flag-us"></div>
+                </div>
               </div>
             </div>
-          </div>
-          <!-- Item 3 -->
-           <div class="grid-item">
-            <div class="member-id">
-              <h2 class="member-id">Rokit</h2>
+            <!-- Item 2 -->
+            <div class="grid-item__member grid-item__background">
+              <div class="member-id">
+                <h2 class="member-id">Lep</h2>
+              </div>
+              <div class="container__portrait-text">
+                <div class="member-portrait__border">
+                  <img
+                    class="member-portrait"
+                    src="./assets/icons/user-solid-full.svg"
+                    title="No readily available picture of Lep"
+                    alt="Lep portrait"
+                  />
+                </div>
+                <p class="member-text"></p>
+              </div>
+              <div class="member-details">
+                <div class="member-details__name">
+                  <h3>Name:</h3>
+                  <p>Joseph Cambriani</p>
+                </div>
+                <div class="member-details__role">
+                  <h3>Role:</h3>
+                  <p>Support</p>
+                </div>
+                <div class="member-details__joined">
+                  <h3>Join Date:</h3>
+                  <p>2026-01-30</p>
+                </div>
+                <div class="member-details__departed">
+                  <h3>Depart Date:</h3>
+                  <p>2026-06-09</p>
+                </div>
+                <div class="member-details__nationality">
+                  <h3>Country:</h3>
+                  <div class="flag-us"></div>
+                </div>
+              </div>
             </div>
-            <div class="member-image__placeholder"></div>
-            <div class="member-details">
-              <div class="member-name">
-                <h3>Name:</h3>
-                <p>Julian Pizana</p>
+            <!-- Item 3 -->
+            <div class="grid-item__member grid-item__background">
+              <div class="member-id">
+                <h2 class="member-id">Lep</h2>
               </div>
-              <div class="member-role">
-                <h3>Role:</h3>
-                <p>DPS</p>
+              <div class="container__portrait-text">
+                <div class="member-portrait__border">
+                  <img
+                    class="member-portrait"
+                    src="./assets/icons/user-solid-full.svg"
+                    title="No readily available picture of Lep"
+                    alt="Lep portrait"
+                  />
+                </div>
+                <p class="member-text"></p>
               </div>
-              <div class="member-join-date">
-                <h3>Join Date:</h3>
-                <p>2026-01-30</p>
-              </div>
-              <div class="member-depart-date">
-                <h3>Depart Date:</h3>
-                <p>2026-01-30</p>
-              </div>
-              <div class="member-nationality">
-                <h3>Country:</h3>
-                <div class="flag-us"></div>
+              <div class="member-details">
+                <div class="member-details__name">
+                  <h3>Name:</h3>
+                  <p>Joseph Cambriani</p>
+                </div>
+                <div class="member-details__role">
+                  <h3>Role:</h3>
+                  <p>Support</p>
+                </div>
+                <div class="member-details__joined">
+                  <h3>Join Date:</h3>
+                  <p>2026-01-30</p>
+                </div>
+                <div class="member-details__departed">
+                  <h3>Depart Date:</h3>
+                  <p>2026-06-09</p>
+                </div>
+                <div class="member-details__nationality">
+                  <h3>Country:</h3>
+                  <div class="flag-us"></div>
+                </div>
               </div>
             </div>
-          </div>
-          <!-- Item 4 -->
-           <div class="grid-item">
-            <div class="member-id">
-              <h2 class="member-id">Rokit</h2>
-            </div>
-            <div class="member-image__placeholder"></div>
-            <div class="member-details">
-              <div class="member-name">
-                <h3>Name:</h3>
-                <p>Julian Pizana</p>
+            <!-- Item 4 -->
+            <div class="grid-item__member grid-item__background">
+              <div class="member-id">
+                <h2 class="member-id">Lep</h2>
               </div>
-              <div class="member-role">
-                <h3>Role:</h3>
-                <p>DPS</p>
+              <div class="container__portrait-text">
+                <div class="member-portrait__border">
+                  <img
+                    class="member-portrait"
+                    src="./assets/icons/user-solid-full.svg"
+                    title="No readily available picture of Lep"
+                    alt="Lep portrait"
+                  />
+                </div>
+                <p class="member-text"></p>
               </div>
-              <div class="member-join-date">
-                <h3>Join Date:</h3>
-                <p>2026-01-30</p>
-              </div>
-              <div class="member-depart-date">
-                <h3>Depart Date:</h3>
-                <p>2026-01-30</p>
-              </div>
-              <div class="member-nationality">
-                <h3>Country:</h3>
-                <div class="flag-us"></div>
+              <div class="member-details">
+                <div class="member-details__name">
+                  <h3>Name:</h3>
+                  <p>Joseph Cambriani</p>
+                </div>
+                <div class="member-details__role">
+                  <h3>Role:</h3>
+                  <p>Support</p>
+                </div>
+                <div class="member-details__joined">
+                  <h3>Join Date:</h3>
+                  <p>2026-01-30</p>
+                </div>
+                <div class="member-details__departed">
+                  <h3>Depart Date:</h3>
+                  <p>2026-06-09</p>
+                </div>
+                <div class="member-details__nationality">
+                  <h3>Country:</h3>
+                  <div class="flag-us"></div>
+                </div>
               </div>
             </div>
           </div>
