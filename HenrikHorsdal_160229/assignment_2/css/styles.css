@@ -1,42 +1,11 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-:root {
-  /* Colors */
-  --card-bg-color: #3d5058;
-  --card-border-color: black;
-  --bg-color: rgba(30, 33, 40);
-  --card-grid-title-bg-color: rgb(135, 174, 190);
-  --font-color-dark: black;
-  --font-color-bright: #f5f5f5;
-  --font-size-small: 1rem;
-  --font-size-medium: 1.5rem;
-  --font-size-large: 2rem;
-}
-
 body {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
+
   align-items: center;
   background-color: var(--bg-color);
   min-height: 100vh;
   width: 100%;
-}
-
-header {
-  display: flex;
-  flex: 0 1 0;
-  width: 100%;
-  height: 6vh;
-  justify-content: space-around;
-  align-items: center;
-  margin-bottom: auto;
-  background-color: rgb(135, 174, 190);
 }
 
 main {
@@ -51,10 +20,13 @@ main {
 
 .divider {
   display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  background-color: black;
+  background-color: rgb(170, 100, 0);
   color: var(--font-color-bright);
   height: 3vh;
+  border-bottom;
 }
 
 .flex-content {
@@ -63,19 +35,9 @@ main {
   margin: 0.2rem 0 0.2rem 0;
 }
 
-.header-container {
-  display: flex;
-  height: 100%;
-}
-
 .flex-container {
   display: flex;
   flex-direction: column;
-}
-
-.header-container__team-logo {
-  object-fit: cover;
-  height: 20;
 }
 
 .team-introduction {
@@ -95,17 +57,18 @@ main {
   padding-bottom: 0.5rem;
   /* margin: 0.2rem 0 0.2rem 0; */
 }
+
 .flex-container__column {
   display: flex;
-  flex: 0 1 50rem;
-  min-width: 0;
-  position: relative;
+  flex: 0 1 auto;
   flex-direction: column;
   justify-content: start;
   align-items: stretch;
+  max-width: 100%;
+  position: relative;
 }
 
-.card-container__background::before {
+.flex-container__background::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -116,33 +79,23 @@ main {
   background-repeat: no-repeat;
 }
 
-.title-test {
-  display: flex;
-  width: 100%;
-  height: auto;
-  justify-content: space-evenly;
-  color: white;
-}
-
-.card-grid-title__active-players,
-.card-grid-title__members,
-.card-grid-title__former-players {
-  text-align: center;
-  width: auto;
-  border-radius: 1.5rem 0 1rem 0;
-  padding: 0.5rem;
+.card-grid__title {
+  align-self: center;
+  padding: 1rem 0 0.5rem 0;
+  margin: 0 0 0.5rem 0;
+  border-bottom: 2px solid orange;
   color: var(--font-color-bright);
-  /* background-color: var(--card-grid-title-bg-color); */
+  /* border-bottom: 2px solid orange; */
 }
 
-.card-grid__active-players,
-.card-grid__members {
+.card-grid__current,
+.card-grid__former {
   display: grid;
   position: relative;
   justify-content: center;
-  max-width: 50rem;
-  grid-template-columns: repeat(auto-fit, 15.5rem);
-  grid-auto-rows: auto;
+  max-width: 200rem;
+  min-width: auto;
+  grid-template-columns: repeat(auto-fit, minmax(15.5rem, 15.5rem));
   gap: 1rem;
 }
 
@@ -150,15 +103,12 @@ main {
   display: grid;
   position: relative;
   justify-content: center;
-  width: auto;
-  border-radius: 1rem;
+  max-width: 90rem;
   grid-template-columns: repeat(auto-fit, 15.5rem);
-  grid-auto-rows: auto;
   gap: 1rem;
 }
 
 .grid-item__member {
-  gap: 0.5rem;
   display: flex;
   position: relative;
   flex-direction: column;
@@ -166,6 +116,7 @@ main {
   justify-content: space-around;
   border: 1.5px solid var(--card-border-color);
   border-radius: 8px;
+  gap: 0.5rem;
   transform: scale(1);
   transition: transform 100ms ease;
   z-index: 3;
@@ -202,7 +153,7 @@ main {
   object-fit: cover;
   border-radius: 10px;
   /* If we wanted, with a little bit of javascript we could have 
-  the background-image below show up instead of <img> in case it
+  the background-image below (a "none available" or a siluette) show up instead of <img> in case it
   fails to load. Currently it just sits behind every portrait.  */
   background-image: url(../assets/icons/na.svg);
   z-index: 3;
@@ -214,9 +165,6 @@ main {
   stroke: whitesmoke;
   height: 100%;
   /* justify-content: center; */
-}
-
-.member-text {
 }
 
 .member-portrait__border {
@@ -272,7 +220,7 @@ main {
 .member-details__name p,
 .member-details__role p,
 .member-details__joined p,
-.member-details__departede p,
+.member-details__departed p,
 .member-details__nationality p {
   font-size: var(--font-size-small);
   color: var(--font-color-bright);
@@ -284,10 +232,12 @@ main {
 footer {
   display: flex;
   width: 100%;
-  height: 3vh;
+  height: 6vh;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   margin-top: auto;
-  background-color: rgb(135, 180, 190);
+  border-top: 2px solid #656565;
+  background-color: var(--bg-color);
+  color: var(--font-color-bright);
 }
