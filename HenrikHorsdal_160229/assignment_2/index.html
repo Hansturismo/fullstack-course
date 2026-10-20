@@ -9,10 +9,12 @@
     <link href="./css/flags.css" rel="stylesheet" />
     <link href="./css/header.css" rel="stylesheet" />
     <link href="./css/links.css" rel="stylesheet" />
+    <link href="./css/grid.css" rel="stylesheet" />
+    <link href="./css/cards.css" rel="stylesheet" />
     <title>Disguised Roster</title>
   </head>
   <body>
-    <!-- Header with project description link -->
+    <!-- Header with logo & links -->
     <header>
       <div class="header-container__team-logo">
         <img
@@ -24,10 +26,10 @@
       </div>
       <div class="header-container__links">
         <a class="header-a" href="https://liquipedia.net/overwatch/Disguised"
-          >Disguised Liquipedia</a
+          >Liquipedia</a
         >
-        <a class="header-a" href="">link 2</a>
-        <a class="header-a" href="">link 3</a>
+        <a class="header-a" href="./match-history.html">Match History</a>
+        <a class="header-a" href="">Twitter</a>
       </div>
       <div class="header-container">
         <p></p>
@@ -36,7 +38,10 @@
     <main>
       <div class="flex-content">
         <div class="team-introduction">
-          <p>Welcome to an overview of the Overwatch esports Team Disguised.</p>
+          <p>
+            Welcome to an overview of the current and former roster of Team
+            Disguised.
+          </p>
           <p>
             Disguised is a North American Overwatch team, founded by YouTuber
             and streamer Disguised Toast.
@@ -47,7 +52,6 @@
           </p>
         </div>
       </div>
-
       <div class="divider">
         <h2>Roster</h2>
       </div>
@@ -55,8 +59,8 @@
       <div class="flex-container__row flex-container__background">
         <div class="flex-container__column">
           <div class="flex-container__column">
-            <h2 class="card-grid__title">Current Players</h2>
-            <div class="card-grid__current">
+            <h2 class="grid__title">Current Players</h2>
+            <div class="grid__current">
               <!-- Item 1 -->
               <div class="grid-item__member grid-item__background">
                 <div class="member-id">
@@ -64,16 +68,19 @@
                 </div>
                 <div class="container__portrait-text">
                   <div class="member-portrait__border">
-                    <img
+                    <a
                       class="member-portrait"
-                      src="./assets/images/portraits/pge.png"
-                      title="PGE at Overwatch CS series"
-                      alt="PGE portrait"
-                    />
+                      href="https://liquipedia.net/overwatch/PGE"
+                      ><img
+                        class="member-portrait"
+                        src="./assets/images/portraits/pge.png"
+                        title="PGE at Overwatch CS series"
+                        alt="PGE portrait"
+                    /></a>
                   </div>
                   <p class="member-text"></p>
                 </div>
-                <div class="member-details">
+                <div class="member-details member-details__background">
                   <div class="member-details__name">
                     <h3>Name:</h3>
                     <p>Evan Ngo</p>
@@ -99,16 +106,21 @@
                 </div>
                 <div class="container__portrait-text">
                   <div class="member-portrait__border">
-                    <img
+                    <a
                       class="member-portrait"
-                      src="./assets/images/portraits/scyle.png"
-                      title="Scuffed stream screenshot of Scyle"
-                      alt="Scyle portrait"
-                    />
+                      href="https://liquipedia.net/overwatch/Scyle"
+                    >
+                      <img
+                        class="member-portrait"
+                        src="./assets/images/portraits/scyle.png"
+                        title="Scuffed stream screenshot of Scyle"
+                        alt="Scyle portrait"
+                      />
+                    </a>
                   </div>
                   <p class="member-text"></p>
                 </div>
-                <div class="member-details">
+                <div class="member-details member-details__background">
                   <div class="member-details__name">
                     <h3>Name:</h3>
                     <p>Simon Broström</p>
@@ -134,16 +146,21 @@
                 </div>
                 <div class="container__portrait-text">
                   <div class="member-portrait__border">
-                    <img
-                      class="member-portrait no-portrait"
-                      src="./assets/icons/user-solid-full.svg"
-                      title="No readily available picture of Ryan"
-                      alt="Ryan portrait"
-                    />
+                    <a
+                      class="member-portrait"
+                      href="https://liquipedia.net/overwatch/Ryan_(American_player)"
+                    >
+                      <img
+                        class="member-portrait no-portrait"
+                        src="./assets/icons/user-solid-full.svg"
+                        title="No readily available picture of Ryan"
+                        alt="Ryan portrait"
+                      />
+                    </a>
                   </div>
                   <p class="member-text"></p>
                 </div>
-                <div class="member-details">
+                <div class="member-details member-details__background">
                   <div class="member-details__name">
                     <h3>Name:</h3>
                     <p>Ryan Micheal Lawless</p>
@@ -169,16 +186,19 @@
                 </div>
                 <div class="container__portrait-text">
                   <div class="member-portrait__border">
-                    <img
+                    <a
                       class="member-portrait"
-                      src="./assets/images/portraits/tred.png"
-                      title="Tred at the 2024 Esports World Cup"
-                      alt="Tred portrait"
-                    />
+                      href="https://liquipedia.net/overwatch/Tred"
+                      ><img
+                        class="member-portrait"
+                        src="./assets/images/portraits/tred.png"
+                        title="Tred at the 2024 Esports World Cup"
+                        alt="Tred portrait"
+                    /></a>
                   </div>
                   <p class="member-text"></p>
                 </div>
-                <div class="member-details">
+                <div class="member-details member-details__background">
                   <div class="member-details__name">
                     <h3>Name:</h3>
                     <p>Alexander Madwick-Smith</p>
@@ -204,16 +224,21 @@
                 </div>
                 <div class="container__portrait-text">
                   <div class="member-portrait__border">
-                    <img
+                    <a
                       class="member-portrait"
-                      src="./assets/images/portraits/smurf.png"
-                      title="Smurf at OWCS Dreamhack"
-                      alt="smurf portrait"
-                    />
+                      href="https://liquipedia.net/overwatch/Smurf"
+                    >
+                      <img
+                        class="member-portrait"
+                        src="./assets/images/portraits/smurf.png"
+                        title="Smurf at OWCS Dreamhack"
+                        alt="smurf portrait"
+                      />
+                    </a>
                   </div>
                   <p class="member-text"></p>
                 </div>
-                <div class="member-details">
+                <div class="member-details member-details__background">
                   <div class="member-details__name">
                     <h3>Name:</h3>
                     <p>Yoo Myeong-hwan</p>
@@ -239,16 +264,21 @@
                 </div>
                 <div class="container__portrait-text">
                   <div class="member-portrait__border">
-                    <img
+                    <a
                       class="member-portrait"
-                      src="./assets/icons/user-solid-full.svg"
-                      title="No readily available picture of KiWii"
-                      alt="Tred portrait"
-                    />
+                      href="https://liquipedia.net/overwatch/KiWii"
+                    >
+                      <img
+                        class="member-portrait"
+                        src="./assets/icons/user-solid-full.svg"
+                        title="No readily available picture of KiWii"
+                        alt="Tred portrait"
+                      />
+                    </a>
                   </div>
                   <p class="member-text"></p>
                 </div>
-                <div class="member-details">
+                <div class="member-details member-details__background">
                   <div class="member-details__name">
                     <h3>Name:</h3>
                     <p>Willem Ryan</p>
@@ -274,16 +304,21 @@
                 </div>
                 <div class="container__portrait-text">
                   <div class="member-portrait__border">
-                    <img
+                    <a
                       class="member-portrait"
-                      src="./assets/icons/user-solid-full.svg"
-                      title="No readily available picture of alex"
-                      alt="alex portrait"
-                    />
+                      href="https://liquipedia.net/overwatch/Alex_(Canadian_player)"
+                    >
+                      <img
+                        class="member-portrait"
+                        src="./assets/icons/user-solid-full.svg"
+                        title="No readily available picture of alex"
+                        alt="alex portrait"
+                      />
+                    </a>
                   </div>
                   <p class="member-text"></p>
                 </div>
-                <div class="member-details">
+                <div class="member-details member-details__background">
                   <div class="member-details__name">
                     <h3>Name:</h3>
                     <p>Alex George</p>
@@ -306,10 +341,10 @@
           </div>
           <!-- Managers & members grid -->
           <div class="flex-container__column">
-            <div class="card-grid__title">
+            <div class="grid__title">
               <h2>Current Members</h2>
             </div>
-            <div class="card-grid__current">
+            <div class="grid__current">
               <!-- Item 1 -->
               <div class="grid-item__member grid-item__background">
                 <div class="member-id">
@@ -317,16 +352,19 @@
                 </div>
                 <div class="container__portrait-text">
                   <div class="member-portrait__border">
-                    <img
+                    <a
                       class="member-portrait"
-                      src="./assets/images/portraits/disguisedtoast.jpg"
-                      title="Toast at TFT Vegas Open 2023"
-                      alt="alex portrait"
-                    />
+                      href="https://en.wikipedia.org/wiki/Disguised_Toast"
+                      ><img
+                        class="member-portrait"
+                        src="./assets/images/portraits/disguisedtoast.jpg"
+                        title="Toast at TFT Vegas Open 2023"
+                        alt="alex portrait"
+                    /></a>
                   </div>
                   <p class="member-text"></p>
                 </div>
-                <div class="member-details">
+                <div class="member-details member-details__background">
                   <div class="member-details__name">
                     <h3>Name:</h3>
                     <p>Jeremy Wang</p>
@@ -352,16 +390,20 @@
                 </div>
                 <div class="container__portrait-text">
                   <div class="member-portrait__border">
-                    <img
+                    <a
                       class="member-portrait"
-                      src="./assets/images/portraits/mcgravy.png"
-                      title="McGravy at the 2024 esports world cup"
-                      alt="alex portrait"
-                    />
+                      href="https://liquipedia.net/overwatch/McGravy"
+                    >
+                      <img
+                        class="member-portrait"
+                        src="./assets/images/portraits/mcgravy.png"
+                        title="McGravy at the 2024 esports world cup"
+                        alt="alex portrait"
+                    /></a>
                   </div>
                   <p class="member-text"></p>
                 </div>
-                <div class="member-details">
+                <div class="member-details member-details__background">
                   <div class="member-details__name">
                     <h3>Name:</h3>
                     <p>Caleb McGarvey</p>
@@ -387,16 +429,21 @@
                 </div>
                 <div class="container__portrait-text">
                   <div class="member-portrait__border">
-                    <img
+                    <a
                       class="member-portrait"
-                      src="./assets/icons/user-solid-full.svg"
-                      title="No readily available picture of Zei"
-                      alt="Zei portrait"
-                    />
+                      href="https://liquipedia.net/overwatch/Zei"
+                    >
+                      <img
+                        class="member-portrait"
+                        src="./assets/icons/user-solid-full.svg"
+                        title="No readily available picture of Zei"
+                        alt="Zei portrait"
+                      />
+                    </a>
                   </div>
                   <p class="member-text"></p>
                 </div>
-                <div class="member-details">
+                <div class="member-details member-details__background">
                   <div class="member-details__name">
                     <h3>Name:</h3>
                     <p>Robin Sidhu</p>
@@ -422,16 +469,21 @@
                 </div>
                 <div class="container__portrait-text">
                   <div class="member-portrait__border">
-                    <img
+                    <a
                       class="member-portrait"
-                      src="./assets/icons/user-solid-full.svg"
-                      title="No readily available picture of yeHHH"
-                      alt="yeHHH portrait"
-                    />
+                      href="https://liquipedia.net/overwatch/YeHHH"
+                    >
+                      <img
+                        class="member-portrait"
+                        src="./assets/icons/user-solid-full.svg"
+                        title="No readily available picture of yeHHH"
+                        alt="yeHHH portrait"
+                      />
+                    </a>
                   </div>
                   <p class="member-text"></p>
                 </div>
-                <div class="member-details">
+                <div class="member-details member-details__background">
                   <div class="member-details__name">
                     <h3>Name:</h3>
                     <p>Albert Yeh</p>
@@ -457,16 +509,20 @@
                 </div>
                 <div class="container__portrait-text">
                   <div class="member-portrait__border">
-                    <img
+                    <a
                       class="member-portrait"
-                      src="./assets/icons/user-solid-full.svg"
-                      title="No readily available picture of ThatAFKNoob"
-                      alt="ThatAFKNoob portrait"
-                    />
+                      href="https://liquipedia.net/overwatch/ThatAFKNoob"
+                    >
+                      <img
+                        class="member-portrait"
+                        src="./assets/icons/user-solid-full.svg"
+                        title="No readily available picture of ThatAFKNoob"
+                        alt="ThatAFKNoob portrait"
+                    /></a>
                   </div>
                   <p class="member-text"></p>
                 </div>
-                <div class="member-details">
+                <div class="member-details member-details__background">
                   <div class="member-details__name">
                     <h3>Name:</h3>
                     <p>Ryan Cohen</p>
@@ -494,8 +550,8 @@
       <div class="flex-container__row flex-container__background">
         <div class="flex-container__column">
           <div class="flex-container__column">
-            <h2 class="card-grid__title">Former Players</h2>
-            <div class="card-grid__former">
+            <h2 class="grid__title">Former Players</h2>
+            <div class="grid__former">
               <!-- Item 1 -->
               <div class="grid-item__member grid-item__background">
                 <div class="member-id">
@@ -512,7 +568,7 @@
                   </div>
                   <p class="member-text"></p>
                 </div>
-                <div class="member-details">
+                <div class="member-details member-details__background">
                   <div class="member-details__name">
                     <h3>Name:</h3>
                     <p>Julian Pizana</p>
@@ -551,7 +607,7 @@
                   </div>
                   <p class="member-text"></p>
                 </div>
-                <div class="member-details">
+                <div class="member-details member-details__background">
                   <div class="member-details__name">
                     <h3>Name:</h3>
                     <p>Joseph Cambriani</p>
@@ -590,7 +646,7 @@
                   </div>
                   <p class="member-text"></p>
                 </div>
-                <div class="member-details">
+                <div class="member-details member-details__background">
                   <div class="member-details__name">
                     <h3>Name:</h3>
                     <p>Julian Bevien-Guevarra</p>
@@ -629,7 +685,7 @@
                   </div>
                   <p class="member-text"></p>
                 </div>
-                <div class="member-details">
+                <div class="member-details member-details__background">
                   <div class="member-details__name">
                     <h3>Name:</h3>
                     <p>Jack Francis</p>
@@ -655,8 +711,8 @@
             </div>
           </div>
           <div class="flex-container__column">
-            <h2 class="card-grid__title">Former Members</h2>
-            <div class="card-grid__former-players">
+            <h2 class="grid__title">Former Members</h2>
+            <div class="grid__former">
               <!-- Item 1 -->
               <div class="grid-item__member grid-item__background">
                 <div class="member-id">
@@ -673,7 +729,7 @@
                   </div>
                   <p class="member-text"></p>
                 </div>
-                <div class="member-details">
+                <div class="member-details member-details__background">
                   <div class="member-details__name">
                     <h3>Name:</h3>
                     <p>Joseph Cambriani</p>
@@ -712,7 +768,7 @@
                   </div>
                   <p class="member-text"></p>
                 </div>
-                <div class="member-details">
+                <div class="member-details member-details__background">
                   <div class="member-details__name">
                     <h3>Name:</h3>
                     <p>Joseph Cambriani</p>
@@ -751,7 +807,7 @@
                   </div>
                   <p class="member-text"></p>
                 </div>
-                <div class="member-details">
+                <div class="member-details member-details__background">
                   <div class="member-details__name">
                     <h3>Name:</h3>
                     <p>Joseph Cambriani</p>
@@ -790,7 +846,7 @@
                   </div>
                   <p class="member-text"></p>
                 </div>
-                <div class="member-details">
+                <div class="member-details member-details__background">
                   <div class="member-details__name">
                     <h3>Name:</h3>
                     <p>Joseph Cambriani</p>

@@ -1,0 +1,141 @@
+.grid-item__member {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border: 1.5px solid var(--card-border-color);
+  border-radius: 8px;
+  gap: 0.5rem;
+  transform: scale(1);
+  transition: transform 100ms ease;
+  z-index: 3;
+}
+
+.grid-item__member:hover,
+.grid-item__member:has(.member-portrait:focus-visible) {
+  transform: scale(1.05);
+  transition: transform 100ms ease;
+}
+
+.grid-item__member:has(.member-portrait:focus-visible) {
+  outline: 2px solid white;
+}
+
+.grid-item__background::before {
+  content: "";
+  background-color: var(--card-bg-color);
+  border-radius: 8px;
+  opacity: 90%;
+  transition: opacity 1s ease;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.grid-item__background:hover::before {
+  opacity: 1;
+  transition: opacity 200ms ease;
+}
+
+.container__portrait-text {
+  z-index: 3;
+}
+
+.member-portrait {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  /* If we wanted, with a little bit of javascript we could have 
+  the background-image below (a "none available" or a siluette) show up instead of <img> in case it
+  fails to load. Currently it just sits behind every portrait.  */
+  background-image: url(../assets/icons/na.svg);
+  z-index: 3;
+  outline: none;
+}
+
+.no-portrait {
+  display: flex;
+  fill: whitesmoke;
+  stroke: whitesmoke;
+  height: 100%;
+  outline: none;
+  /* justify-content: center; */
+}
+
+.member-portrait__border {
+  display: flex;
+  height: 180px;
+  width: 140px;
+  border: 1.5px solid black;
+  border-radius: 10px;
+  z-index: 3;
+}
+
+.member-id {
+  /* border-bottom: 1px solid black; */
+  font-size: var(--font-size-large);
+  color: var(--font-color-bright);
+  z-index: 3;
+}
+
+.member-details {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+  border-top: 1.5px solid black;
+  padding: 0.3rem 0.3rem 0 0.3rem;
+  z-index: 3;
+}
+
+.member-details__background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url(../assets/images/backgrounds/DSG\ Apex\ Header.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 0;
+  opacity: 50%;
+}
+
+.member-details__name,
+.member-details__role,
+.member-details__joined,
+.member-details__departed,
+.member-details__nationality {
+  display: flex;
+  align-items: center;
+  height: 1.5rem;
+  justify-content: space-between;
+  z-index: 3;
+}
+
+.member-details__name h3,
+.member-details__role h3,
+.member-details__joined h3,
+.member-details__departed h3,
+.member-details__nationality h3 {
+  font-size: var(--font-size-small);
+  color: var(--font-color-bright);
+  text-align: left;
+  z-index: 3;
+}
+
+.member-details__name p,
+.member-details__role p,
+.member-details__joined p,
+.member-details__departed p,
+.member-details__nationality p {
+  font-size: var(--font-size-small);
+  color: var(--font-color-bright);
+  text-decoration: underline;
+  text-align: right;
+  z-index: 3;
+}

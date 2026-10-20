@@ -1,11 +1,20 @@
 header {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-template-rows: auto;
   width: 100%;
   height: auto;
   background-color: var(--bg-color);
   border-bottom: 2px solid #656565;
+}
+
+/* Makes the header only have 1 column as the viewport shrinks below 440px */
+@media (max-width: 440px) {
+  header {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
 }
 
 .header-container {
@@ -25,15 +34,26 @@ header {
 }
 
 .header-container__links {
-  display: flex;
-  height: auto;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   align-items: center;
+  align-self: center;
 }
 
+.header-a {
+  align-self: center;
+  text-align: center;
+}
+
+/* Header links, general link styles in links.css */
 .header-a:link {
-  color: white;
+  font-weight: bold;
+  font-size: var(--font-size-medium);
+  color: var(--team-color);
 }
 .header-a:visited {
   color: orange;
+}
+.header-a:hover {
+  color: whitesmoke;
 }
