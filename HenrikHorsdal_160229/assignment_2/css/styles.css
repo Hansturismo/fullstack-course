@@ -1,7 +1,6 @@
 body {
   display: flex;
   flex-direction: column;
-
   align-items: center;
   background-color: var(--bg-color);
   min-height: 100vh;
@@ -15,7 +14,6 @@ main {
   align-items: center;
   justify-content: space-around;
   width: 100%;
-  margin: 0.2rem 0;
 }
 
 .divider {
@@ -26,7 +24,6 @@ main {
   background-color: var(--divider-color);
   color: var(--font-color-bright);
   height: 3vh;
-  border-bottom;
 }
 
 .flex-content {
@@ -55,18 +52,18 @@ main {
   width: 100%;
   gap: 2rem;
   padding-bottom: 0.5rem;
-  /* margin: 0.2rem 0 0.2rem 0; */
 }
 
 .flex-container__column {
   display: flex;
   flex: 0 1 auto;
   flex-direction: column;
-  justify-content: start;
+  justify-content: center;
   align-items: stretch;
   max-width: 100%;
   min-width: 100%;
   position: relative;
+  padding-bottom: 0.5rem;
 }
 
 .flex-container__background::before {
@@ -74,22 +71,9 @@ main {
   position: absolute;
   inset: 0;
   opacity: 60%;
-  background-image: url(../assets/images/backgrounds/DSG\ Apex\ Header.png);
+  background-image: url("../assets/images/backgrounds/DSG-Apex-Header.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 0;
-}
-
-footer {
-  display: flex;
-  width: 100%;
-  height: 6vh;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: auto;
-  border-top: 2px solid #656565;
-  background-color: var(--bg-color);
-  color: var(--font-color-bright);
 }

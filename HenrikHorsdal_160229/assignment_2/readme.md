@@ -2,3 +2,5 @@ This project is a student assignment and the purpose of the assignment is to cre
 
 Github repo: https://github.com/Hansturismo/assignment-2
 Deployment: coming
+
+@ Henrik Horsdal / Hansturismo
