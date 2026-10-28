@@ -9,7 +9,7 @@ function largerThan(num1, num2) {
   }
 }
 
-let num1 = 10;
+let num1 = 8;
 let num2 = 10;
 
 console.log(largerThan(num1, num2));
