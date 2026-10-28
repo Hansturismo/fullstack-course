@@ -1,15 +1,15 @@
-function largerThan(num1, num2) {
-  let message = `Out of ${num1} and ${num2},`;
-  if (num1 > num2) {
-    return `${message} ${num1} is the bigger number`;
-  } else if (num1 == num2) {
+function largerThan(num1Prompt, num2Prompt) {
+  let message = `Out of ${num1Prompt} and ${num2Prompt},`;
+  if (num1Prompt > num2Prompt) {
+    return `${message} ${num1Prompt} is the bigger number`;
+  } else if (num1Prompt == num2Prompt) {
     return "Equal numbers";
   } else {
-    return `${message} ${num2} is the bigger number`;
+    return `${message} ${num2Prompt} is the bigger number`;
   }
 }
 
-let num1 = 8;
-let num2 = 10;
+let num1Prompt = Number(prompt("Enter first number"));
+let num2Prompt = Number(prompt("Enter second number"));
 
-console.log(largerThan(num1, num2));
+alert(largerThan(num1Prompt, num2Prompt));
