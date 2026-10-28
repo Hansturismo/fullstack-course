@@ -5,7 +5,7 @@ function gradeAverage(grades) {
     numberOfGrades++;
     gradeScoreTotal += i;
     if (i > 100) {
-        return "Invalid grade scores"
+      return "Invalid grade scores";
     }
   }
   let averageScore = gradeScoreTotal / numberOfGrades;
@@ -26,6 +26,6 @@ function gradeAverage(grades) {
   }
 }
 
-const grades = [100, 82, 91, 20, 63, 89];
+const grades = [100, 82, 91, 20, 63, 85];
 
 console.log(gradeAverage(grades));
