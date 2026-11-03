@@ -45,7 +45,6 @@ header {
   text-align: center;
 }
 
-/* Header links, general link styles in links.css */
 .header-a:link {
   font-weight: bold;
   font-size: var(--font-size-medium);

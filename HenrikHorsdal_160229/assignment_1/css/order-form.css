@@ -1,0 +1,116 @@
+.form-title {
+  text-align: center;
+  font-size: 2rem;
+  text-decoration: underline;
+  background-color: blanchedalmond;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.flex-container__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.form-legend {
+  font-weight: bold;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  gap: 2px;
+  max-width: auto;
+  width: 420px;
+  min-width: 250px;
+  border-radius: 10px;
+  background-color: blanchedalmond;
+}
+
+.product-options {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  gap: 15px;
+  max-width: auto;
+  width: 420px;
+  min-width: 250px;
+  border-radius: 10px;
+  background-color: blanchedalmond;
+}
+
+.product-options__color {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  padding: 12px;
+  gap: 4px;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.product-options__storage {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  padding: 12px;
+  gap: 4px;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.product-options__optionals {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  padding: 12px;
+  gap: 4px;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.order-form__title {
+  text-decoration: underline;
+  margin: 20px 0 20px 0;
+}
+
+.order-disclaimer {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  padding: 12px;
+  gap: 4px;
+  width: 420px;
+  max-width: auto;
+  border-radius: 10px;
+  background-color: blanchedalmond;
+}
+
+.button-form__submit {
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  max-width: auto;
+  min-width: auto;
+  height: auto;
+  min-height: 50px;
+  font-size: 1.3rem;
+  background-color: orange;
+  color: black;
+  border: 2px solid black;
+  border-radius: 16px;
+  padding: 0 5px 0 5px;
+  margin-top: auto;
+}
+
+.button-form__submit:hover {
+  background-color: orangered;
+}
+
+.button-form__submit:active {
+  transform: scale(0.95);
+}
