@@ -13,7 +13,7 @@ for (key in product) {
 }
 
 console.log("------------updated object displayed with console.log-------------------");
-// console.log("original object remains unchanged when creating a copy using structuredClone()");
+
 
 const updatedProduct = structuredClone(product)
 updatedProduct.price = 1000;
@@ -22,8 +22,10 @@ for (key in updatedProduct) {
     console.log(key, updatedProduct[key]);
     
 }
+// original object remains unchanged when creating a copy using structuredClone()
 
 console.log("------updated object displayed using console.log & JSON.stringify-------");
+// Using stringify we can show deeper values.
 
 console.dir(JSON.stringify(product, null, 2));
 
