@@ -25,6 +25,7 @@ function FirstLastV2(array) {
 const array1 = [10, 20, 30, 40, 90];
 const array2 = [5, 99, 1];
 const array3 = [7, 8];
+const emptyArray = [];
 
 FirstLast(array1);
 FirstLast(array2);
@@ -33,3 +34,5 @@ FirstLast(array3);
 FirstLastV2(array1);
 FirstLastV2(array2);
 FirstLastV2(array3);
+// Just to test...
+FirstLastV2(emptyArray);
