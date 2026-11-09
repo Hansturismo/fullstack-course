@@ -1,0 +1,11 @@
+/* Fonts */
+@font-face {
+  font-family: "Montserrat-Variable";
+  src: url("../assets/fonts/Montserrat-Variable.ttf");
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Montserrat-Variable";
+}
