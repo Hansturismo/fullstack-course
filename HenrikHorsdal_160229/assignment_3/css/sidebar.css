@@ -1,6 +1,57 @@
 .sidebar {
-  display: flex;
-  height: 100%;
-  width: 16%;
-  background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    min-width: 18rem;
+    max-width: 20rem;
+    height: auto;
+    background-color: darkslategray;
+    color: var(--font-color);
+    border-right: 1px solid black;
+    border-radius: 0 1rem 1rem 0;
+    margin: var(--margin-sections) var(--margin-sections) var(--margin-sections) 0;
+}
+
+.sidebar__divider {
+    border-top: 1px solid rgb(65, 105, 105);
+    align-self: center;
+    width: 90%;
+}
+
+.searchbar {
+    height: 20%;
+    max-height: 20%;
+    padding: 1rem 0.4rem;
+    font-size: large;
+}
+
+.searchbar input {
+    width: 70%;
+}
+
+.playlists {
+    display: flex;
+    max-height: 80%;
+    padding: 1rem 0.4rem;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.playlists-title {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.playlists-title button {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.playlists-list {
+    display: grid;
+    grid-template-rows: repeat(auto, 100px);
+    grid-gap: 0.6rem;
+    border: 1px solid rgb(59, 94, 94);
+    padding: 0.5rem;
 }
