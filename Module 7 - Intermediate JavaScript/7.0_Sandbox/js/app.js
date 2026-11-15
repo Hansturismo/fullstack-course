@@ -12,7 +12,7 @@ console.log(listItems);
 const listItemsWithTag = document.getElementsByTagName("ul");
 console.log(listItemsWithTag);
 
-// Select elements with querySelector
+// Select elements with querySelector using CSS selectors
 const titleWithQuery = document.querySelector("#title");
 console.log(titleWithQuery);
 

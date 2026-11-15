@@ -1,0 +1,126 @@
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-md) var(--spacing-lg);
+  background-color: #181c14;
+}
+
+/* Logo */
+.navbar__logo {
+  display: block;
+  width: 64px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.navbar__logo:hover {
+  transform: translateY(-4px);
+}
+
+/* Menu */
+.navbar__menu {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-lg);
+  font-weight: 500;
+}
+
+/* Links */
+.navbar__link {
+  color: #fefefe;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar__link:hover {
+  color: #fac898;
+}
+
+.navbar__link:focus {
+  outline: 2px solid #fac898;
+  outline-offset: 4px;
+}
+
+/* Actions */
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.navbar__button {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #fefefe;
+  background-color: transparent;
+
+  border: none;
+  cursor: pointer;
+
+  transition: color 0.3s ease;
+}
+
+.navbar__button:hover {
+  color: #fac898;
+}
+
+/* Hidden on desktop */
+.navbar__button--menu {
+  display: none;
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: space-between;
+  }
+
+  /* Mobile menu */
+  .navbar__menu {
+    position: fixed;
+    top: 0;
+    left: 100vw;
+    width: 100vw;
+    height: 100svh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-lg);
+    background-color: #181c14;
+    font-size: var(--font-size-md);
+    transition: left 0.5s ease;
+  }
+
+  /* Active state */
+  .navbar__menu--active {
+    left: 0;
+  }
+
+  /* Show hamburger */
+  .navbar__button--menu {
+    display: flex;
+  }
+
+  /* Keep actions above menu */
+  .navbar__actions {
+    z-index: 2;
+  }
+
+  /* Smaller logo */
+  .navbar__logo {
+    position: relative;
+    width: 48px;
+    z-index: 2;
+  }
+}

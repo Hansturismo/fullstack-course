@@ -3,9 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link href="./css/styles.css" rel="stylesheet"> -->
-    <script src="./js/app.js" defer></script>
-    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/variables.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/navbar.css" />
+    <title>JavaScript Module 7 — DOM Exercise</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="navbar__logo-container">
+          <a href="#">
+            <img
+              src="./assets/icons/css-logo.svg"
+              alt="CSS logo"
+              class="navbar__logo"
+            />
+          </a>
+        </div>
+
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="#" class="navbar__link">Home</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#" class="navbar__link">About</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#" class="navbar__link">Products</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#" class="navbar__link">Gallery</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#" class="navbar__link">Contact</a>
+          </li>
+        </ul>
+
+        <div class="navbar__actions">
+          <button class="navbar__button navbar__button--profile">
+            <i class="fa-solid fa-user fa-2xl"></i>
+          </button>
+
+          <button class="navbar__button navbar__button--cart">
+            <i class="fa-solid fa-cart-shopping fa-2xl"></i>
+          </button>
+          <button class="navbar__button navbar__button--menu">
+            <i class="fa-solid fa-bars fa-2xl"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <script src="./js/app.js"></script>
+  </body>
 </html>

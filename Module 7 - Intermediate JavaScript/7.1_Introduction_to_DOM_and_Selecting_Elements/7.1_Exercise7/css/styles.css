@@ -1,0 +1,25 @@
+/* Fonts */
+@font-face {
+  font-family: "Montserrat-Variable";
+  src: url("../assets/fonts/Montserrat-Variable.ttf");
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Montserrat-Variable", Arial, sans-serif;
+  background-color: #f8f8ff;
+}
+header {
+  padding: var(--spacing-lg);
+  text-align: center;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+.container h2 {
+  padding: var(--spacing-md) 0;
+}

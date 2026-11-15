@@ -1,0 +1,49 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.counter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: grey;
+  border: 2px solid black;
+  border-radius: 4px;
+  width: 16rem;
+  height: 12rem;
+  gap: 1rem;
+}
+
+.counter__sum--background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid darkslategray;
+  border-radius: 4px;
+  background-color: whitesmoke;
+  font-size: x-large;
+}
+
+.counter__button--increase,
+.counter__button--reset,
+.counter__button--decrease {
+  width: 5rem;
+  height: auto;
+  font-size: x-large;
+  border-radius: 0.5rem;
+}
+
+.counter__button--increase {
+  background-color: lightgreen;
+  font-size: x-large;
+}
+
+.counter__button--decrease {
+  background-color: lightcoral;
+  font-size: x-large;
+}
