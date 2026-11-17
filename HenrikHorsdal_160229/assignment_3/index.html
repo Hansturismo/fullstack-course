@@ -13,7 +13,9 @@
         <link href="./css/footer.css" rel="stylesheet" />
         <link rel="icon" type="image/x-icon" href="/icons/favicon.ico" />
         <script src="./js/songs.js" defer></script>
+        <script src="./js/rendering.js" defer></script>
         <script src="./js/playlists.js" defer></script>
+        <script src="./js/search.js" defer></script>
         <script src="./js/app.js" defer></script>
         <title>Audivio</title>
     </head>
@@ -56,13 +58,12 @@
             </div>
             <div class="content-wrapper">
                 <div class="content-selected"></div>
-                <div class="content__divider"></div>
-                <div class="grid-container">
-                    <div class="track-info">
-                        <p>Title</p>
-                        <p>Artist</p>
-                        <p>Genre</p>
-                        <p>Duration</p>
+                <div class="results-container">
+                    <div class="track-head">
+                        <p class="track-detail">Title</p>
+                        <p class="track-detail">Artist</p>
+                        <p class="track-detail">Genre</p>
+                        <p class="track-detail">Duration</p>
                     </div>
                 </div>
             </div>

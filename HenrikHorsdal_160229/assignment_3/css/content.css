@@ -22,7 +22,7 @@
     padding: 1rem 0.4rem;
 }
 
-.grid-container {
+.results-container {
     display: grid;
     grid-template-rows: repeat(auto, 2rem);
     row-gap: 0.4rem;
@@ -34,13 +34,12 @@
     border-radius: 0.5rem;
 }
 
-.track-info {
+.track-head, .track {
     display: grid;
     grid-template-columns: repeat(4, minmax(100px, 1fr));
     border-bottom: 1px solid rgb(65, 105, 105);
 }
 
-.track {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(100px, 1fr));
+.track-detail {
+
 }
