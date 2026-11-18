@@ -1,5 +1,5 @@
 const resultsContainer = document.querySelector(".results-container");
-function renderSearchResults(array) {
+const renderSearchResults = function renderSearchResults(array) {
     clearRenderer();
     // takes the number from duration value and formats it into minutes and seconds
     function numberToMinutesSeconds(number) {
@@ -24,13 +24,17 @@ function renderSearchResults(array) {
         const genre = document.createElement("p");
         genre.textContent = array[i].genre;
         const duration = document.createElement("p");
-        const formattedDuration = numberToMinutesSeconds(array[i].duration);
-        duration.textContent = formattedDuration;
-        song.append(title, artist, genre, formattedDuration);
+        duration.textContent = numberToMinutesSeconds(array[i].duration);
+        song.append(title, artist, genre, duration);
         song.classList.add("track");
         resultsContainer.append(song);
     }
+};
+
+function sortResultsByGenre() {
+    console.log(`Sorted results by genre`);
 }
+
 function showNoResults() {
     clearRenderer();
     const noResultsElement = document.createElement("p");
@@ -47,11 +51,21 @@ function clearRenderer() {
         console.log("Removing noResults message");
         noResults.remove();
     }
-    if (!renderedResults.length == 0) {
+    if (renderedResults.length > 0) {
         console.log(renderedResults);
         console.log("Removing rendered results");
         renderedResults.forEach((item) => {
             item.remove();
         });
     }
+}
+
+// function renderPlaylists(array) {}
+
+function showSearchbarMobile() {
+    console.log(`Opening searchbar`);
+    const searchPromptMenu = document.querySelector(".searchbar--mobile");
+    console.log(searchPromptMenu);
+
+    searchPromptMenu.classList.toggle("searchbar--show");
 }

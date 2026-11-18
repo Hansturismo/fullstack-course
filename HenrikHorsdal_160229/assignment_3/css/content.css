@@ -1,45 +1,134 @@
 .content-wrapper {
     display: flex;
+    flex: 1 1 auto;
     flex-direction: column;
     align-items: center;
     margin: var(--margin-sections) 0 var(--margin-sections) var(--margin-sections);
-    height: auto;
+    min-height: 0;
+    width: 95%;
+    gap: 0.5rem;
+    position: relative;
+}
+
+.content-selected {
+    display: flex;
+    flex: 0 1 auto;
+    min-height: 10rem;
     width: 100%;
-    max-width: auto;
     background-color: darkslategray;
     border-radius: 1rem 0 0 1rem;
 }
 
-.content__divider {
-    border-top: 1px solid rgb(65, 105, 105);
-    align-self: center;
-    width: 98%;
-}
-
-.content-selected {
-    height: 20%;
+.results-wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: darkslategray;
+    border-radius: 1rem 0 0 1rem;
+    flex: 1 1 auto;
+    min-height: 0;
     width: 100%;
-    padding: 1rem 0.4rem;
 }
 
 .results-container {
-    display: grid;
-    grid-template-rows: repeat(auto, 2rem);
-    row-gap: 0.4rem;
     color: var(--font-color);
-    padding: 1rem 0.4rem;
     width: 100%;
-    max-height: 100%;
-    border: 1px solid rgb(59, 94, 94);
     border-radius: 0.5rem;
+    overflow-y: auto;
+    flex: 1 1 auto;
+    padding: 0 1rem;
 }
 
-.track-head, .track {
+.results__grid-head {
     display: grid;
-    grid-template-columns: repeat(4, minmax(100px, 1fr));
-    border-bottom: 1px solid rgb(65, 105, 105);
+    grid-template-columns: repeat(2, minmax(100px, 1fr)) minmax(50px, 0.5fr) minmax(50px, 0.5fr);
+    border-bottom: 2px dashed gray;
+    padding: 1rem 1rem 0 1rem;
+}
+.results__grid-head button:last-child {
+    justify-self: right;
 }
 
-.track-detail {
+.track {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 1fr)) minmax(50px, 0.5fr) minmax(50px, 0.5fr);
+    border-bottom: 1px solid rgb(65, 105, 105);
+    font-size: large;
+    margin-top: 1rem;
+}
 
+.track > p {
+    margin-right: 0.3rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.track p:last-child {
+    justify-self: right;
+}
+
+#sortByTitle,
+#sortByArtist,
+#sortByGenre {
+    color: var(--font-color);
+    background-color: transparent;
+    font-size: large;
+    border: none;
+    text-align: left;
+    max-width: 4rem;
+}
+
+#sortByDuration {
+    color: var(--font-color);
+    background-color: transparent;
+    font-size: large;
+    border: none;
+    text-align: right;
+    max-width: 4rem;
+}
+
+#sortByTitle:active,
+#sortByArtist:active,
+#sortByGenre:active {
+    color: var(--font-color);
+    background-color: transparent;
+    font-size: medium;
+    border: none;
+}
+
+/* #sortByDuration:active {
+} */
+
+.no-results {
+    font-size: large;
+}
+
+@media (max-width: 800px) {
+    .content-wrapper {
+        margin: var(--margin-sections);
+    }
+
+    .content-selected {
+        display: none;
+    }
+    .results-wrapper {
+        border-radius: 1rem 1rem 1rem 1rem;
+    }
+    .results__grid-head {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(100px, 1fr)) minmax(20px, 0.2fr);
+    }
+    .results__grid-head button:nth-child(3) {
+        display: none;
+    }
+
+    .track p:nth-child(3) {
+        display: none;
+    }
+
+    .track {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(100px, 1fr)) minmax(20px, 0.2fr);
+        font-size: larger;
+        margin-top: 1.5rem;
+    }
 }

@@ -3,7 +3,7 @@
     flex-direction: column;
     min-width: 18rem;
     max-width: 20rem;
-    height: auto;
+    flex: 0 1 auto;
     background-color: darkslategray;
     color: var(--font-color);
     border-right: 1px solid black;
@@ -18,8 +18,8 @@
 }
 
 .searchbar {
-    height: 20%;
-    max-height: 20%;
+    flex: 0 1 auto;
+    height: 10%;
     padding: 1rem 0.4rem;
     font-size: large;
 }
@@ -30,7 +30,7 @@
 
 .playlists {
     display: flex;
-    max-height: 80%;
+    flex: 0 1 auto;
     padding: 1rem 0.4rem;
     flex-direction: column;
     gap: 0.5rem;
@@ -55,4 +55,26 @@
     border: 1px solid rgb(59, 94, 94);
     border-radius: 0.5rem;
     padding: 0.5rem;
+}
+
+@media (max-width: 800px) {
+    .sidebar {
+        transform: translateX(-100%);
+        position: fixed;
+        max-width: 20rem;
+    }
+    .main {
+        position: relative;
+    }
+
+    .sidebar--open {
+        transform: translateX(0);
+        position: absolute;
+    }
+    .searchbar--mobile {
+        flex: 1 1 auto;
+        height: 20%;
+        padding: 1rem 0.4rem;
+        font-size: large;
+    }
 }

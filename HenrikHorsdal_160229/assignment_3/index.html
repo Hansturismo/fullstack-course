@@ -6,7 +6,6 @@
         <link href="./css/reset.css" rel="stylesheet" />
         <link href="./css/variables.css" rel="stylesheet" />
         <link href="./css/styles.css" rel="stylesheet" />
-        <link href="./css/musicplayer.css" rel="stylesheet" />
         <link href="./css/header.css" rel="stylesheet" />
         <link href="./css/sidebar.css" rel="stylesheet" />
         <link href="./css/content.css" rel="stylesheet" />
@@ -45,29 +44,34 @@
                         <button title="Create playlist">+</button>
                         <p>Your created playlists are displayed here.</p>
                     </div>
+                    <!-- Playlists populated by locally stored array -->
                     <div class="playlists-list">
-                        <!-- JavaScript could add this IF there's not saved playlists..? -->
-                        <!-- <p class="no-playlists">No playlists.. why not make one?</p> -->
-                        <div>Item 1</div>
-                        <div>Item 1</div>
-                        <div>Item 1</div>
-                        <div>Item 1</div>
-                        <div>Item 1</div>
+                        <div>No playlists to show</div>
                     </div>
                 </div>
             </div>
             <div class="content-wrapper">
+                <!-- Area for selected song/playlist? -->
                 <div class="content-selected"></div>
-                <div class="results-container">
-                    <div class="track-head">
-                        <p class="track-detail">Title</p>
-                        <p class="track-detail">Artist</p>
-                        <p class="track-detail">Genre</p>
-                        <p class="track-detail">Duration</p>
+                <div class="results-wrapper">
+                    <div class="results__grid-head">
+                        <!-- Buttons to sort results and to act as a table head -->
+                        <button id="sortByTitle" title="Click to sort">Title</button>
+                        <button id="sortByArtist" title="Click to sort">Artist</button>
+                        <button id="sortByGenre" title="Click to sort">Genre</button>
+                        <button id="sortByDuration">Duration</button>
                     </div>
+                    <div class="results-container"></div>
+                </div>
+                <div class="searchbar--mobile searchbar--show" id="searchMenuMobile">
+                    <label for="searchInputMobile">Search for a song:</label>
+                    <input type="text" name="searchInputMobile" id="searchInputMobile" />
                 </div>
             </div>
         </main>
-        <footer></footer>
+        <footer>
+            <button id="openPlaylistsButton">Playlists</button>
+            <button id="searchPromptButton">Search</button>
+        </footer>
     </body>
 </html>
