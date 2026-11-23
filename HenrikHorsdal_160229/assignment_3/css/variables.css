@@ -1,6 +1,22 @@
 * {
-  --margin-sections: 0.3rem;
-  --body-bg: black;
-  --header-bg: darkslateblue;
-  --font-color: whitesmoke;
+    --margin-sections: 0.3rem;
+    /* Font colors */
+    --font-color: whitesmoke;
+    --placeholder-font-color: rgb(220, 220, 220);
+    /* Background colors */
+    --body-bg-color: rgb(40, 40, 40);
+    --header-bg-color: rgb(61, 68, 140);
+    --footer-bg-color: rgb(61, 68, 140);
+    --search-menu-mobile-bg-color: rgba(61, 68, 140, 0.621);
+    --search-input-bg-color: rgb(61, 68, 140);
+    --content-bg-color: rgb(40, 55, 65);
+    --sidebar-bg-color: rgb(40, 55, 65);
+    /* Content/track colors */
+    --track-color-dark: rgb(40, 40, 40);
+    --track-color-light: rgb(50, 50, 50);
+
+    /* Sizes */
+    --font-size-small: 0.8rem;
+    --font-size-medium: 1rem;
+    --font-size-large: 1.5rem;
 }

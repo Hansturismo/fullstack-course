@@ -5,77 +5,15 @@ footer {
     width: 100%;
     flex: 0 0 auto;
     height: 4rem;
-    background-color: darkslateblue;
+    background-color: var(--footer-bg-color);
     border-top: 1px solid black;
     color: var(--font-color);
     margin-top: var(--margin-sections);
-}
-
-#openPlaylistsButton,
-#openSearchPromptButton {
-    display: none;
-    width: 100px;
-    font-size: large;
-    height: 40px;
-    border-radius: 2rem;
-    border: solid white 2px;
-}
-
-#openPlaylistsButton:active,
-#openSearchPromptButton:active {
-    background-color: lightgray;
-}
-
-.searchbar--mobile {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    background-color: darkslateblue;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    color: var(--font-color);
-}
-
-.searchbar--show {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: darkslateblue;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    color: var(--font-color);
-}
-
-.searchMenuMobile > label {
-    text-align: center;
-    font-size: x-large;
-}
-
-.searchMenuMobile > input {
-    height: 2.5rem;
-    border-radius: 3rem;
-    border: none;
-    padding: 0 1rem 0 1rem;
-    background-color: rgb(104, 88, 205);
-    color: whitesmoke;
-    font-size: large;
+    z-index: 6;
 }
 
 @media (max-width: 800px) {
     footer {
-        display: flex;
-    }
-
-    #openPlaylistsButton,
-    #openSearchPromptButton {
-        display: block;
-    }
-
-    #searchMenuMobile--open {
         display: flex;
     }
 }

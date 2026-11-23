@@ -4,8 +4,8 @@ header {
     align-items: center;
     width: 100%;
     flex: 0 0 auto;
-    height: 4rem;
-    background-color: var(--header-bg);
+    height: 6rem;
+    background-color: var(--header-bg-color);
     color: var(--font-color);
     border-bottom: 1px solid black;
     margin-bottom: var(--margin-sections);

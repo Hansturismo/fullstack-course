@@ -1,14 +1,36 @@
-const searchInput = document.querySelector("#searchInput");
-const searchButton = document.querySelector("#searchButton");
+const searchInputDesktop = document.querySelector("#searchInputDesktop");
+const searchInputMobile = document.querySelector("#searchInputMobile");
+const createPlaylistButtonDesktop = document.querySelector("#createPlaylistButtonDesktop");
+const createPlaylistButtonMobile = document.querySelector("#createPlaylistButtonMobile");
+const playlistCreationForm = document.querySelector("#playlistCreationForm");
+
+// Sorting buttons
 const sortByTitle = document.querySelector("#sortByTitle");
 const sortByArtist = document.querySelector("#sortByArtist");
 const sortByGenre = document.querySelector("#sortByGenre");
 
-const searchPromptButton = document.querySelector("#searchPromptButton");
+// Search input on desktop
+searchInputDesktop.addEventListener("input", search);
+// Create playlist on desktop
+createPlaylistButtonDesktop.addEventListener("click", createPlaylist);
 
-searchInput.addEventListener("keyup", search);
-searchButton.addEventListener("click", search);
-sortByGenre.addEventListener("click", sortResultsByGenre);
+// Mobile buttons
+const playlistsMobileButton = document.querySelector("#openPlaylistsButton");
+const searchPromptButton = document.querySelector("#openSearchPromptButton");
+// Opens the searchbar on mobile
 searchPromptButton.addEventListener("click", showSearchbarMobile);
+searchInputMobile.addEventListener("input", searchMobile);
+// Opens the playlists on mobile
+const playlistsMobile = document.querySelector("#playlistsMobile");
+playlistsMobileButton.addEventListener("click", showPlaylistsMobile);
+// Create playlist on mobile
+createPlaylistButtonMobile.addEventListener("click", createPlaylist);
+
+// Sorting on desktop
+// sortByTitle.addEventListener("click", sortResultsByTitle);
+// sortByArtist.addEventListener("click", sortResultsByArtist);
+// sortByGenre.addEventListener("click", sortResultsByGenre);
 
 renderSearchResults(songs);
+
+renderPlaylists(playlistArray);
