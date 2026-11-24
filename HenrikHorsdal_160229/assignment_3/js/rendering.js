@@ -97,23 +97,40 @@ function showPlaylistsMobile() {
     console.log(`Opening playlists`);
     playlistsMobile.classList.toggle("playlists--hide");
 }
-const playlistList = document.querySelectorAll(".playlists-list");
+
+const playlistContainer = document.querySelectorAll(".playlists-list");
 function renderPlaylists(array) {
+    console.log(array);
+    clearPlaylists;
     if (array.length == 0) {
-        playlistList.forEach((playlistNode) => {
-            const playlist = document.createElement("p");
-            playlist.textContent = "No playlists to show";
-            playlistNode.append(playlist);
+        playlistContainer.forEach((playlistNode) => {
+            const noPlaylists = showNoPlaylistsMessage();
+            playlistNode.append(noPlaylists);
         });
     } else {
-        playlistList.forEach((playlistNode) => {
+        playlistContainer.forEach((playlistNode) => {
             for (let i = 0; i < array.length; i++) {
                 const playlist = document.createElement("div");
                 const title = document.createElement("h3");
                 title.textContent = array[i].title;
                 playlist.append(title);
-                playlistNode.append(playlist)
+                playlistNode.append(playlist);
             }
         });
+    }
+}
+
+function showNoPlaylistsMessage() {
+    const noPlaylists = document.createElement("p");
+    noPlaylists.classList.add("playlists__no-results");
+    noPlaylists.textContent = "No playlists have been created";
+    return noPlaylists;
+}
+
+function clearPlaylists() {
+    const noResults = document.querySelector("");
+    if (noResults) {
+        console.log("Removing noResults message");
+        noResults.remove();
     }
 }

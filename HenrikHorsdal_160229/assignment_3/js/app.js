@@ -1,8 +1,8 @@
 const searchInputDesktop = document.querySelector("#searchInputDesktop");
 const searchInputMobile = document.querySelector("#searchInputMobile");
-const createPlaylistButtonDesktop = document.querySelector("#createPlaylistButtonDesktop");
-const createPlaylistButtonMobile = document.querySelector("#createPlaylistButtonMobile");
-const playlistCreationForm = document.querySelector("#playlistCreationForm");
+
+
+
 
 // Sorting buttons
 const sortByTitle = document.querySelector("#sortByTitle");
@@ -24,7 +24,7 @@ searchInputMobile.addEventListener("input", searchMobile);
 const playlistsMobile = document.querySelector("#playlistsMobile");
 playlistsMobileButton.addEventListener("click", showPlaylistsMobile);
 // Create playlist on mobile
-createPlaylistButtonMobile.addEventListener("click", createPlaylist);
+
 
 // Sorting on desktop
 // sortByTitle.addEventListener("click", sortResultsByTitle);

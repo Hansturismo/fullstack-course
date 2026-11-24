@@ -1,36 +1,62 @@
-// Initialize a playlists array
-const playlistArray = [
-    { id: 1, title: "test-playlist", songs: [] },
-    { id: 2, title: "test-2" },
-];
-
+const createPlaylistButtonDesktop = document.querySelector("#createPlaylistButtonDesktop");
+const createPlaylistButtonMobile = document.querySelector("#createPlaylistButtonMobile");
+const newPlaylistForm = document.querySelector("#createPlaylistMobile");
 const createPlaylistMobileView = document.querySelector("#createPlaylistMobile");
 const createPlaylistForm = document.querySelector("#playlistCreationForm");
-const playlistName = document.querySelector("#playlistName")
+const playlistName = document.querySelector("#playlistName");
 
-createPlaylistForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const playlistTitle = playlistName.value.trim();
-    if (playlistName === "") {
-        errorText.textContent = "The playlist name cannot be empty.";
-        return;
+// Initialize a playlists array
+const playlistArray = [];
+
+// Closes the newPlaylistForm if the document is interacted with while it's visible.
+function handlePointerDown(e) {
+    if (!createPlaylistMobileView.contains(e.target) && !searchPromptButton.contains(e.target)) {
+        if (e.target == createPlaylistButtonMobile) {
+            return;
+        } else {
+            createPlaylistMobileView.classList.add("playlists--hide");
+            document.removeEventListener("pointerdown", handlePointerDown);
+            return;
+        }
     }
-})
+}
+
+function showNewPlaylistForm() {
+    console.clear();
+    document.addEventListener("pointerdown", handlePointerDown);
+    createPlaylistMobileView.classList.toggle("playlists--hide");
+    console.log(`Toggling newPlaylistView`);
+}
+// Shows the input to create a new playlist
+createPlaylistButtonMobile.addEventListener("click", showNewPlaylistForm);
 
 // Creates a playlist object
 function createPlaylist(title) {
     let playlist = {
         id: crypto.randomUUID(),
-        title: null,
-        entries: playlist.length,
-        songs: [],
+        title: title,
+        savedSongs: [],
     };
-    // playlists.push(playlist);
+    playlistArray.push(playlist);
+    console.log(playlistArray);
+    renderPlaylists(playlistArray);
 }
+
+createPlaylistForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const playlistName = createPlaylistForm.elements["playlistName"].value.trim();
+    if (playlistName === "") {
+        console.log(`The playlist name cannot be empty.`);
+        return;
+    } else if (playlistArray.some((playlist) => playlist.title === playlistName)) {
+        console.log(`The playlist name should be unique.`);
+        return;
+    } else {
+        createPlaylist(playlistName);
+        createPlaylistMobileView.classList.toggle("playlists--hide");
+    }
+});
 
 const savePlaylist = () => {
     localStorage.setItem("playlists", playlistArray);
 };
-
-
-sa
