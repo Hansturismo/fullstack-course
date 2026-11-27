@@ -253,9 +253,6 @@
         display: grid;
         grid-template-columns: minmax(50px, 0.2fr) minmax(50px, 1fr) minmax(50px, 0.6fr) 50px 50px;
     }
-    .content__results-header button:nth-child(2) {
-        /* display: none; */
-    }
 
     .content__results-header button:last-child {
         justify-self: right;
