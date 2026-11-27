@@ -7,8 +7,9 @@
     --body-bg-color: rgb(40, 40, 40);
     --header-bg-color: rgb(61, 68, 140);
     --footer-bg-color: rgb(61, 68, 140);
-    --search-menu-mobile-bg-color: rgba(61, 68, 140, 0.621);
-    --search-input-bg-color: rgb(61, 68, 140);
+    --search-mobile-bg-color: rgba(61, 68, 140, 0.621);
+    --create-playlist-desktop-bg-color: rgba(31, 43, 51, 0.507);
+    --input-bg-color: rgb(61, 68, 140);
     --content-bg-color: rgb(40, 55, 65);
     --sidebar-bg-color: rgb(40, 55, 65);
     /* Content/track colors */

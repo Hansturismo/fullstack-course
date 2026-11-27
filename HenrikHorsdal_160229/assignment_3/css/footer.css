@@ -12,6 +12,7 @@ footer {
     z-index: 6;
 }
 
+
 @media (max-width: 800px) {
     footer {
         display: flex;

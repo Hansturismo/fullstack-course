@@ -1,35 +1,39 @@
 const searchInputDesktop = document.querySelector("#searchInputDesktop");
 const searchInputMobile = document.querySelector("#searchInputMobile");
 
-
-
-
 // Sorting buttons
-const sortByTitle = document.querySelector("#sortByTitle");
-const sortByArtist = document.querySelector("#sortByArtist");
-const sortByGenre = document.querySelector("#sortByGenre");
+const sortByTitleButton = document.querySelector("#sortByTitle");
+const sortByArtistButton = document.querySelector("#sortByArtist");
+const sortByGenreButton = document.querySelector("#sortByGenre");
 
 // Search input on desktop
 searchInputDesktop.addEventListener("input", search);
-// Create playlist on desktop
-createPlaylistButtonDesktop.addEventListener("click", createPlaylist);
 
 // Mobile buttons
 const playlistsMobileButton = document.querySelector("#openPlaylistsButton");
-const searchPromptButton = document.querySelector("#openSearchPromptButton");
+const searchPromptButtonMobile = document.querySelector("#openSearchPromptButton");
 // Opens the searchbar on mobile
-searchPromptButton.addEventListener("click", showSearchbarMobile);
+searchPromptButtonMobile.addEventListener("click", showSearchbarMobile);
 searchInputMobile.addEventListener("input", searchMobile);
 // Opens the playlists on mobile
 const playlistsMobile = document.querySelector("#playlistsMobile");
 playlistsMobileButton.addEventListener("click", showPlaylistsMobile);
 // Create playlist on mobile
 
+// Sorting
+sortByTitleButton.addEventListener("click", () => {
+    sorting("title");
+    // console.log(displayedResults);
+})
+sortByArtistButton.addEventListener("click", () => {
 
-// Sorting on desktop
-// sortByTitle.addEventListener("click", sortResultsByTitle);
-// sortByArtist.addEventListener("click", sortResultsByArtist);
-// sortByGenre.addEventListener("click", sortResultsByGenre);
+    sorting("artist")
+    // console.log(displayedResults);
+})
+sortByGenreButton.addEventListener("click", () => {
+    sorting("genre")
+    // console.log(displayedResults);
+})
 
 renderSearchResults(songs);
 

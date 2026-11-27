@@ -28,6 +28,13 @@
             <div class="header-content"></div>
         </header>
         <main>
+            <div class="playlists__creation--desktop playlists--hide-desktop" id="createPlaylistDesktop" inert>
+                    <form id="playlistCreationFormDesktop">
+                        <label for="playlistName">Playlist name</label>
+                        <input type="text" name="playlistName" id="playlistName"/>
+                        <button type="submit" form="playlistCreationFormDesktop" value="Submit">Create</button>
+                    </form>
+                </div>
             <div class="sidebar">
                 <div class="searchbar">
                     <label for="searchInputDesktop">Search for a song</label>
@@ -41,46 +48,84 @@
                 <div class="sidebar__divider"></div>
                 <!-- Playlists for desktop -->
                 <div class="playlists" id="playlistDesktop">
-                    <div class="playlists-title">
-                        <h2>My Playlists</h2>
-                        <button title="Create playlist" id="createPlaylistButtonDesktop">+</button>
+                    <div class="playlists__container">
+                        <div class="playlists__header">
+                            <h2>My Playlists</h2>
+                            <button title="Create playlist" id="createPlaylistButtonDesktop" aria-label="Create playlist" >+</button>
+                        </div>
                         <p>Your created playlists are displayed here.</p>
                     </div>
                     <!-- Playlists populated by locally stored array -->
-                    <div class="playlists-list">
+                    <div class="playlists__list">
                     </div>
                 </div>
-                <div class="playlists__creation playlists--hide" id="createPlaylistDesktop"></div>
             </div>
             <div class="content">
                 <div class="content__results">
                     <div class="content__results-header">
                         <!-- Buttons to sort results and to act as a table head -->
-                        <button id="sortByTitle" title="Click to sort">Title</button>
-                        <button id="sortByArtist" title="Click to sort">Artist</button>
-                        <button id="sortByGenre" title="Click to sort">Genre</button>
-                        <button id="sortByDuration">Duration</button>
+                        <button id="sortByTitle" title="Click to sort" aria-label="Sort, title">Title</button>
+                        <button id="sortByArtist" title="Click to sort" aria-label="Sort, artist">Artist</button>
+                        <button id="sortByGenre" title="Click to sort" aria-label="Sort, genre">Genre</button>
+                        <button id="sortByDuration">
+                            <img src="./assets/icons/timer-svgrepo-com.svg" class="track__duration--icon"></img>
+                        </button>
+                        <div></div>
                     </div>
                     <div class="content__results-container"></div>
                 </div>
+                <div class="playlist-view playlist-view--hide" inert>
+                    <div class="playlist-view__title">
+                        <h2></h2>
+                        <button class="playlist-view__close">Close</button>
+                    </div>
+                    <div class="playlist-view__header">
+                        <button id="sortByTitle" title="Click to sort" aria-label="Sort, title">Title</button>
+                        <button id="sortByArtist" title="Click to sort" aria-label="Sort, artist">Artist</button>
+                        <button id="sortByGenre" title="Click to sort" aria-label="Sort, genre">Genre</button>
+                        <button id="sortByDuration">
+                            <img src="./assets/icons/timer-svgrepo-com.svg" class="track__duration--icon"></img>
+                        </button>
+                        <div></div>
+                    </div>
+                    <div class="playlist-view__tracks">
+                        
+                    </div>
+                </div>
+                <div class="playlist-selector playlist-selector--hide">
+                    <div class="playlist-selector__backdrop"></div>
+                    <div class="playlist-selector__view">
+                        <div class="playlist-selector__controls">
+                            <h2>Add to playlist</h2>
+                            <button title="Cancel" aria-label="Cancel adding to playlist action">Cancel</button>
+                        </div>
+                        <div class="playlist-selector__list">
+                            <div>1</div>
+                            <div>2</div>
+                        </div>
+                     </div>
+                </div>
                 <!-- Playlists for mobile -->
-                <div class="playlists playlists--hide" id="playlistsMobile">
-                    <div class="playlists-title">
-                        <h2>My Playlists</h2>
-                        <button title="Create playlist" id="createPlaylistButtonMobile">+</button>
+                <div class="playlists playlists--hide-mobile" id="playlistsMobile" inert>
+                    <div class="playlists__container">
+                        <div class="playlists__header">
+                            <h2>My Playlists</h2>
+                            <button title="Create playlist" id="createPlaylistButtonMobile" aria-label="Create playlist">+</button>
+                        </div>
                         <p>Your created playlists are displayed here.</p>
                     </div>
                     <!-- Playlists populated by locally stored array -->
-                    <div class="playlists-list">
+                    <div class="playlists__list">
                     </div>
                 </div>
-                <div class="playlists__creation playlists--hide" id="createPlaylistMobile">
-                    <form id="playlistCreationForm">
+                <div class="playlists__creation--mobile playlists--hide-mobile" id="createPlaylistMobile" inert>
+                    <form id="playlistCreationFormMobile">
                         <label for="playlistName">Playlist name</label>
                         <input type="text" name="playlistName" id="playlistName"/>
+                        <button type="submit" form="playlistCreationFormMobile" value="Submit">Add</button>
                     </form>
                 </div>
-                <div class="searchbar searchbar--hide" id="searchMenuMobile">
+                <div class="searchbar searchbar--hide" id="searchMenuMobile" inert>
                     <input
                         type="text"
                         name="searchInputMobile"
